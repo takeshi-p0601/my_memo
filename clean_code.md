@@ -64,6 +64,97 @@ func viewDidLoad() {
 - count自身を変更するには、 _count を使う
 - countが読み取り / _countが更新のための変数として役割が分けられる
 
+## 多態
+
+ラベルと料金情報をもつような下記の概念があったとする
+- 大人料金
+- 子供料金
+
+単純にこれらをクラス化すると、下記のようになる
+
+```
+class SeneorFee {
+
+func label() -> String {
+ "シニア"
+}
+
+func fee() -> Int {
+ 1500
+}
+
+}
+
+class ChildFee {
+
+func label() -> String {
+ "シニア"
+}
+
+func fee() -> Int {
+ 800
+}
+}
+
+```
+
+大人料金と子供料金の合計を算出するクラスを作るとき
+下記のように、子供と大人で、それぞれ配列の中身を計算する必要がある。。
+
+```
+
+class CalculatorFee {
+  var childFeeList: [ChildFee] = []
+  var seneorFeeList: [SeneorFee] = []
+
+  func calculate() -> Int {
+     for childFeeList in fee {
+       // 合計算出
+     }
+     for seneorFeeList in fee {
+     　　　// 合計算出
+     }
+}
+
+
+```
+
+上記の処理では子供と大人とで、型の違いがあるため
+それぞれで合計の算出をしなくてはいけない
+
+そこで多態という考え方を使って、修正を試みると
+
+```
+protocol Fee {
+ func label() -> String
+ func fee() -> Int
+}
+
+class ChildFee: Fee {
+
+}
+
+class SeneorFee: Fee {
+
+}
+
+class CalculatorFee {
+  var feeList: [Fee] = []
+
+  func calculate() -> Int {
+     for feeList in fee {
+     
+     }
+   }
+}
+
+```
+この場合だと型の違いで処理を分けなくて良い
+
+
+
+
+
 
 
 
