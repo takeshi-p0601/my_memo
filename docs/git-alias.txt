@@ -1,0 +1,16 @@
+[alias]
+s = status
+sh = stash
+shc = stash clear
+shl = stash list
+sha = stash apply stash@{0}
+br = branch
+brd = branch -D
+brm = branch -m
+pl = pull origin
+ps = push origin
+psh = push origin HEAD
+l = log --oneline -10
+c = checkout
+cm = commit
+a = add .
