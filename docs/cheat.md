@@ -7,6 +7,12 @@
 ssh -T git@github.com
 ```
 
+## merge 取り消し
+
+```
+git merge --abort
+```
+
 # xcode
 
 ## scrollView storyboard 設定
