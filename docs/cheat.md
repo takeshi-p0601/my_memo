@@ -13,6 +13,12 @@ ssh -T git@github.com
 git merge --abort
 ```
 
+## 一時的に過去のcommitに戻す
+
+```
+git checkout <コミットid>
+```
+
 # xcode
 
 ## scrollView storyboard 設定
