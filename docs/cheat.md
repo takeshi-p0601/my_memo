@@ -21,7 +21,14 @@ git checkout <コミットid>
 
 # xcode
 
-## scrollView storyboard 設定
+## UIKit
+
+collectionViewのセルを左寄せにする https://github.com/takeshi-1000/my_memo/issues/60#issuecomment-1101255004
+
+
+## storyboard
+
+### scrollView storyboard 設定
 
 #### 1. viewController に ScrollViewを配置し、上下左右のmarginを全て0にする
 
