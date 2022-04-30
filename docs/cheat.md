@@ -1,3 +1,10 @@
+# 小技
+
+## finder
+
+finder 隠しファイル表示非表示
+
+`command + shift + .（コマンド + シフト ＋ ピリオド）`
 
 # git
 
