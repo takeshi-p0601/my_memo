@@ -18,6 +18,14 @@ mv ファイル1 ディレクトリA
 
 例: `mv 9cc.c /home/study/9cc`
 
+### ディレクトリ移動
+
+```
+cd ~/me/Xcode/..
+cd /Applications/..
+cd me/Xcode
+```
+
 # git
 
 ## ssh 接続テスト
