@@ -46,6 +46,12 @@ git merge --abort
 git checkout <コミットid>
 ```
 
+## ブランチまとめて削除
+
+```
+git branch | grep -v "master\|develop" | xargs git branch -D
+```
+
 # xcode
 
 ## UIKit
