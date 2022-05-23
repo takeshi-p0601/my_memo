@@ -99,3 +99,24 @@ collectionViewのセルを左寄せにする https://github.com/takeshi-1000/my_
 
 https://rxmarbles.com/#withLatestFrom
 
+
+# c
+
+## 文字列
+
+```
+int main(int argc, char **argv) {
+
+    char *p = "a  aab";
+
+    printf("先頭文字p: %c\n", *p);
+    printf("文字列: %s\n", p);
+
+    printf("先頭文字p: %c\n", *argv[1]);
+    printf("文字列: %s\n", argv[1]);
+
+    return 0;
+
+}
+```
+
