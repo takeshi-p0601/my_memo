@@ -22,11 +22,22 @@ architecture 1
     align 2^14 (16384)
 ```
 
-- hexdump -n 40 /bin/ls
+- hexdump -n 40 /bin/ls ファイルの中身を16進数表示。 -n　でバイト数指定
 
 ```
 $ hexdump -n 20 /bin/ls
 0000000 ca fe ba be 00 00 00 02 01 00 00 07 00 00 00 03
 0000010 00 00 40 00                                    
 0000014
+```
+
+- lipo -archs /Applications/Xcode.app/Contents/MacOS/Xcode 実行バイナリに対応するcpuアーキテクチャの出力
+
+```
+$ lipo -archs /Applications/Xcode.app/Contents/MacOS/Xcode  
+x86_64 arm64
+
+[takeshikomori@MacBook-Pro-2:~/me/private]
+$ lipo -archs /bin/ls
+x86_64 arm64e
 ```
