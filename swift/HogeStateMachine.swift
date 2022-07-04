@@ -1,23 +1,23 @@
 import Foundation
 import Combine
 
-enum DoorState {
+enum HogeDoorViewState: Equatable {
     case None
     case Loading
-    case Open
-    case Close
-    case Retry
+    case UnLocked
+    case Locked
+    case Retryable
 }
 
 class HogeViewModel: ObservableObject {
     private let stateMachine: HogeStateMachine
     
-    @Published var doorState: DoorState = .None
-
-    @Published var retryFlg: Bool = false
-    @Published var tryOpenFlg: Bool = false
-    @Published var tryCloseFlg: Bool = false
     @Published var remoteFlg: Bool = false
+    @Published var doorState: HogeDoorViewState = .None
+    
+//    @Published var isLoading: Bool = false
+//    @Published var failedData: (Bool, String?) = (isFailed: false, error: nil)
+//    @Published var isLocked: Bool = false
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -25,36 +25,8 @@ class HogeViewModel: ObservableObject {
         self.stateMachine = stateMachine
         
         $remoteFlg
-            .sink { remoteFlg in
-                stateMachine.action.send(.changeRemoteFlg(remoteFlg))
-                self.remoteFlg.toggle()
-            }
-            .store(in: &cancellables)
-        
-        $tryOpenFlg
-            .sink { openFlg in
-                if openFlg {
-                    stateMachine.action.send(.tryOpen)
-                    self.tryOpenFlg.toggle()
-                }
-            }
-            .store(in: &cancellables)
-        
-        $tryCloseFlg
-            .sink { closeFlg in
-                if closeFlg {
-                    stateMachine.action.send(.tryClose)
-                    self.tryCloseFlg.toggle()
-                }
-            }
-            .store(in: &cancellables)
-        
-        $retryFlg
-            .sink { retryFlg in
-                if retryFlg {
-                    stateMachine.action.send(.retry)
-                    self.retryFlg.toggle()
-                }
+            .sink {
+                stateMachine.action.send(.changeRemoteFlg($0))
             }
             .store(in: &cancellables)
         
@@ -66,35 +38,49 @@ class HogeViewModel: ObservableObject {
             .sink { state in
                 switch state {
                 case .None:
-                    break
-                case .LoadingFetchState, .LoadingOpen, .LoadingClose:
+                    self.doorState = .None
+                    
+                case .LoadingFetchState, .LoadingUnLock, .LoadingLock:
                     self.doorState = .Loading
                     
-                case .SuccessFetchState(let isOpen):
-                    self.doorState = isOpen ? .Open : .Close
+                case .SuccessFetchState(let isLocked):
+                    self.doorState = isLocked ? .Locked : .UnLocked
                     
                 case .FailFetchState:
-                    self.doorState = .Retry
+                    self.doorState = .Retryable
                     
-                case .SuccessOpen:
-                    self.doorState = .Loading
+                case .SuccessUnLock:
+                    self.doorState = .None
                     
-                case .FailOpen:
-                    self.doorState = .Retry
+                case .FailUnLock:
+                    self.doorState = .Retryable
                     
-                case .SuccessClose:
-                    self.doorState = .Close
+                case .SuccessLock:
+                    self.doorState = .None
                     
-                case .FailClose:
-                    self.doorState = .Retry
+                case .FailLock:
+                    self.doorState = .Retryable
+                    
                 }
             }
             .store(in: &cancellables)
     }
+    
+    func tryOpen() {
+        stateMachine.action.send(.tryUnLock)
+    }
+    
+    func tryClose() {
+        stateMachine.action.send(.tryLock)
+    }
+    
+    func retry() {
+        stateMachine.action.send(.retry)
+    }
 }
 
 class HogeStateMachine {
-    private let hogeManager: HogeManager
+    private let akerunDoorInput: AkerunDoorInput
     
     // input
     let action = PassthroughSubject<HogeAction, Never>()
@@ -106,8 +92,8 @@ class HogeStateMachine {
     
     private var cancellables: Set<AnyCancellable> = []
     
-    init(manager: HogeManager) {
-        self.hogeManager = manager
+    init(akerunDoorInput: AkerunDoorInput) {
+        self.akerunDoorInput = akerunDoorInput
         
         action
             .combineLatest(_state)
@@ -116,68 +102,44 @@ class HogeStateMachine {
                 case .initialLoading:
                     if case .None = state {
                         self._state.send(.LoadingFetchState)
-                        self.hogeManager.fetchStateWithBle.send(())
+//                        self.hogeManager.fetchStateWithBle.send(())
                     }
                 case .changeRemoteFlg(let remoteFlg):
-                    // どう制御するか
                     
                     self._state.send(.LoadingFetchState)
-                    remoteFlg
-                    ? self.hogeManager.fetchStateWithWebApi.send(())
-                    : self.hogeManager.fetchStateWithBle.send(())
+//                    remoteFlg
+//                    ? self.hogeManager.fetchStateWithWebApi.send(())
+//                    : self.hogeManager.fetchStateWithBle.send(())
                 case .retry:
                     switch state {
                     case .FailFetchState:
                         self._state.send(.LoadingFetchState)
-                        self.hogeManager.fetchStateWithBle.send(()) // BLE, Webどっち？
-                    case .FailOpen:
-                        self._state.send(.LoadingOpen)
-                        self.hogeManager.open.send(())
-                    case .FailClose:
-                        self._state.send(.LoadingClose)
-                        self.hogeManager.close.send(())
+//                        self.hogeManager.fetchStateWithBle.send(())
+                    case .FailUnLock:
+                        self._state.send(.LoadingUnLock)
+//                        self.hogeManager.open.send(())
+                    case .FailLock:
+                        self._state.send(.LoadingLock)
+//                        self.hogeManager.close.send(())
                     default:
                         break
                     }
-                case .tryOpen:
-                    self._state.send(.LoadingOpen)
-                    self.hogeManager.open.send(())
-                case .tryClose:
-                    self._state.send(.LoadingClose)
-                    self.hogeManager.close.send(())
+                case .tryUnLock:
+                    self._state.send(.LoadingUnLock)
+//                    self.hogeManager.open.send(())
+                case .tryLock:
+                    self._state.send(.LoadingLock)
+//                    self.hogeManager.close.send(())
                 }
-            }
-            .store(in: &cancellables)
-        
-        bindManagerOutput()
-    }
-    
-    private func bindManagerOutput() {
-        
-        hogeManager.openResult
-            .sink { isSuccess in
-                isSuccess
-                ? self._state.send(.SuccessOpen)
-                : self._state.send(.FailClose)
-            }
-            .store(in: &cancellables)
-        
-        hogeManager.closeResult
-            .sink { isSuccess in
-                isSuccess
-                ? self._state.send(.SuccessClose)
-                : self._state.send(.FailClose)
-            }
-            .store(in: &cancellables)
-        
-        hogeManager.stateResultWithApi
-            .merge(with: hogeManager.stateResultWithBle)
-            .sink { isOpen in
-                self._state.send(.SuccessFetchState(isOpen))
             }
             .store(in: &cancellables)
     }
 }
+
+extension HogeStateMachine: HogeDoorDelegate {
+    
+}
+    
 
 enum HogeState {
     case None
@@ -185,33 +147,19 @@ enum HogeState {
     case SuccessFetchState(Bool)
     case FailFetchState
     
-    case LoadingOpen
-    case SuccessOpen
-    case FailOpen
+    case LoadingUnLock
+    case SuccessUnLock
+    case FailUnLock
     
-    case LoadingClose
-    case SuccessClose
-    case FailClose
+    case LoadingLock
+    case SuccessLock
+    case FailLock
 }
 
 enum HogeAction {
     case initialLoading
     case changeRemoteFlg(Bool)
+    case tryUnLock
+    case tryLock
     case retry
-    case tryOpen
-    case tryClose
-}
-
-class HogeManager {
-    // input
-    let fetchStateWithBle = PassthroughSubject<Void, Never>()
-    let fetchStateWithWebApi = PassthroughSubject<Void, Never>()
-    let open = PassthroughSubject<Void, Never>()
-    let close = PassthroughSubject<Void, Never>()
-    
-    // output
-    let stateResultWithBle = PassthroughSubject<Bool, Never>()
-    let stateResultWithApi = PassthroughSubject<Bool, Never>()
-    let openResult = PassthroughSubject<Bool, Never>()
-    let closeResult = PassthroughSubject<Bool, Never>()
 }
