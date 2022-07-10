@@ -272,6 +272,7 @@ a.out:
 0000000100003fa0 d65f03c0 
 ```
 
+(ファイルフォーマットがELFでもできる)
 - $ xcrun otool -v -t a.out
 
 ```
@@ -292,5 +293,37 @@ _main:
 0000000100003f98	ldp	x29, x30, [sp, #0x10]
 0000000100003f9c	add	sp, sp, #0x20
 0000000100003fa0	ret
+```
+
+- objdump -d a.out
+
+```
+$ objdump -d a.out 
+
+a.out:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000100003f70 <_main>:
+100003f70: ff 83 00 d1 	sub	sp, sp, #32
+100003f74: fd 7b 01 a9 	stp	x29, x30, [sp, #16]
+100003f78: fd 43 00 91 	add	x29, sp, #16
+100003f7c: 08 00 80 52 	mov	w8, #0
+100003f80: e8 0b 00 b9 	str	w8, [sp, #8]
+100003f84: bf c3 1f b8 	stur	wzr, [x29, #-4]
+100003f88: 00 00 00 90 	adrp	x0, 0x100003000 <_main+0x18>
+100003f8c: 00 c0 3e 91 	add	x0, x0, #4016
+100003f90: 05 00 00 94 	bl	0x100003fa4 <_printf+0x100003fa4>
+100003f94: e0 0b 40 b9 	ldr	w0, [sp, #8]
+100003f98: fd 7b 41 a9 	ldp	x29, x30, [sp, #16]
+100003f9c: ff 83 00 91 	add	sp, sp, #32
+100003fa0: c0 03 5f d6 	ret
+
+Disassembly of section __TEXT,__stubs:
+
+0000000100003fa4 <__stubs>:
+100003fa4: 10 00 00 b0 	adrp	x16, 0x100004000 <__stubs+0x4>
+100003fa8: 10 02 40 f9 	ldr	x16, [x16]
+100003fac: 00 02 1f d6 	br	x16
 ```
 
