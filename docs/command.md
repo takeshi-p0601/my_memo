@@ -257,3 +257,40 @@ Segment __DATA_CONST: 0x4000 (vmaddr 0x100004000 fileoff 16384)
 Segment __LINKEDIT: 0x4000 (vmaddr 0x100008000 fileoff 32768)
 total 0x10000c000
 ```
+
+Mach-oのExecutableのTEXTセグメントのtextセクションの機械語と逆アセンブル
+
+- $ xcrun otool -s __TEXT __text a.out
+
+```
+$ xcrun otool -s __TEXT __text a.out
+a.out:
+(__TEXT,__text) section
+0000000100003f70 d10083ff a9017bfd 910043fd 52800008 
+0000000100003f80 b9000be8 b81fc3bf 90000000 913ec000 
+0000000100003f90 94000005 b9400be0 a9417bfd 910083ff 
+0000000100003fa0 d65f03c0 
+```
+
+- $ xcrun otool -v -t a.out
+
+```
+$ xcrun otool -v -t a.out
+a.out:
+(__TEXT,__text) section
+_main:
+0000000100003f70	sub	sp, sp, #0x20
+0000000100003f74	stp	x29, x30, [sp, #0x10]
+0000000100003f78	add	x29, sp, #0x10
+0000000100003f7c	mov	w8, #0x0
+0000000100003f80	str	w8, [sp, #0x8]
+0000000100003f84	stur	wzr, [x29, #-0x4]
+0000000100003f88	adrp	x0, 0 ; 0x100003000
+0000000100003f8c	add	x0, x0, #0xfb0 ; literal pool for: "Hello\n"
+0000000100003f90	bl	0x100003fa4 ; symbol stub for: _printf
+0000000100003f94	ldr	w0, [sp, #0x8]
+0000000100003f98	ldp	x29, x30, [sp, #0x10]
+0000000100003f9c	add	sp, sp, #0x20
+0000000100003fa0	ret
+```
+
