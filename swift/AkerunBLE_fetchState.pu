@@ -1,0 +1,149 @@
+@startuml
+
+actor Actor
+
+participant AkerunDoorHalfModalView
+participant AkerunDoorHalfModalViewModel
+participant AkerunDoorStateMachine
+participant AkerunDoorManager
+participant AkerunBleRepository
+participant WebApiRepository
+participant Robot2
+participant "BLEManager\nBLEManager2"
+participant "LGPeripheral\nLGService\nLGCharacteristic\nAkerun"
+participant WebAPI
+
+Actor -> AkerunDoorHalfModalView: 状態取得\n・初回表示時\n・遠隔フラグをOff時\n・リトライボタン押下時
+
+activate AkerunDoorHalfModalView
+AkerunDoorHalfModalView -> AkerunDoorHalfModalViewModel: initialLoading, changeRemoteFlg, Retry
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalViewModel -> AkerunDoorStateMachine: stateMachine action \n ・initialLoading\n ・fetchState
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorStateMachine -> AkerunDoorManager: scanDoor
+AkerunDoorHalfModalViewModel <-- AkerunDoorStateMachine: stateMachine state Loading
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalView <-- AkerunDoorHalfModalViewModel: メンバ更新(doorState(.loading))
+deactivate
+
+activate AkerunDoorHalfModalView
+Actor <-- AkerunDoorHalfModalView: Loading表示
+deactivate
+
+AkerunDoorManager --> AkerunBleRepository: scanPeripheral(uuid, timeout)
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+
+alt error case 1
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+AkerunDoorManager <-- AkerunBleRepository: callback(message)
+
+activate AkerunDoorManager
+AkerunDoorStateMachine <-- AkerunDoorManager: didScanDoorNotFound()
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorHalfModalViewModel <-- AkerunDoorStateMachine: stateMachine state Retryable
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalView <-- AkerunDoorHalfModalViewModel: メンバ更新(WIP)
+deactivate
+
+activate AkerunDoorHalfModalView
+Actor <-- AkerunDoorHalfModalView: エラー表示
+deactivate
+
+else error case 2 
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+AkerunDoorManager <-- AkerunBleRepository: callback(message)
+
+activate AkerunDoorManager
+AkerunDoorStateMachine <-- AkerunDoorManager: bleDeviceDidDisconnect(.disconnect)
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorHalfModalViewModel <-- AkerunDoorStateMachine: stateMachine state Retryable
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalView <-- AkerunDoorHalfModalViewModel: メンバ更新(WIP)
+deactivate
+
+activate AkerunDoorHalfModalView
+Actor <-- AkerunDoorHalfModalView: エラー表示
+deactivate
+
+else success case
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+AkerunDoorManager <-- AkerunBleRepository: bleDeviceDidDisconnect(.disconnect)
+
+activate AkerunDoorManager
+AkerunDoorStateMachine <-- AkerunDoorManager: didGetDoorConnectState(.found)
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorStateMachine --> AkerunDoorManager: fetchDoorState()
+deactivate
+
+activate AkerunDoorManager
+AkerunDoorManager --> AkerunBleRepository: fetchDoorState()
+deactivate
+
+
+alt レスポンスエラー
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+AkerunDoorManager <-- AkerunBleRepository: bleDeviceDidSendedError()
+
+activate AkerunDoorManager
+AkerunDoorStateMachine <-- AkerunDoorManager: didControlDoorSuccess(false)
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorHalfModalViewModel <-- AkerunDoorStateMachine: stateMachine state Retryable
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalView <-- AkerunDoorHalfModalViewModel: メンバ更新(WIP)
+deactivate
+
+activate AkerunDoorHalfModalView
+Actor <-- AkerunDoorHalfModalView: エラー表示\n(状態取得するメッセージを促す(WIP))
+deactivate
+
+else success
+
+ref over AkerunBleRepository, WebAPI: [[https://app.diagrams.net/#G1987uFyvHc8fhaeYvlSX1mmRZ4jwHpd2c 以降の処理は"ドア設定.drawio 施錠解錠"シート参考]]
+AkerunDoorManager <-- AkerunBleRepository: bleDeviceLockStatus(isLock)
+
+activate AkerunDoorManager
+AkerunDoorStateMachine <-- AkerunDoorManager: didGetDoorState(state)
+deactivate
+
+activate AkerunDoorStateMachine
+AkerunDoorHalfModalViewModel <-- AkerunDoorStateMachine: stateMachine state\n・SuccessFetchState(isLocked: true)\n・SuccessFetchState(isLocked: false)
+deactivate
+
+activate AkerunDoorHalfModalViewModel
+AkerunDoorHalfModalView <-- AkerunDoorHalfModalViewModel: メンバ更新(WIP)
+deactivate
+
+activate AkerunDoorHalfModalView
+Actor <-- AkerunDoorHalfModalView: Loadingストップ、鍵施錠解錠の状態更新
+deactivate
+
+end
+
+end
+
+@enduml
