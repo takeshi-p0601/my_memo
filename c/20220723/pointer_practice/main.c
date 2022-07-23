@@ -20,6 +20,7 @@ int main(int argc, const char * argv[]) {
     p = &a;
     printf("p: %p\n", p); // 0x16fdff294
     printf("&p: %p\n", &p); // 0x16fdff288
+    printf("*p: %d\n", *p); // 100000
     
     printf("p+1: %p\n", p+1); // 0x16fdff298
     
@@ -49,12 +50,12 @@ int main(int argc, const char * argv[]) {
      である。ただどちらに格納されてるかちょっとわからんが、ポインタの演算的に+すると素直に高アドレスに
      行くところを見ると
      
-     |1B|16fdff293|00 ↑?
+     |1B|16fdff293|....
      |1B|16fdff294|40
      |1B|16fdff295|42
      |1B|16fdff296|0F
      |1B|16fdff297|00
-     
+     |1B|16fdff298|....
      */
     
     
