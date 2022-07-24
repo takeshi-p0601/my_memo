@@ -35,6 +35,23 @@ int main(void)
 }
 
 /*
+ 出力結果
+ 
+ @@ main before test
+ i1: 0x16fdff2a8
+ i2: 0x16fdff2a4
+ @@ test(int *i1, int *i2)
+ i1: 0x16fdff2a8
+ i2: 0x16fdff2a4
+ &i1: 0x16fdff268
+ &i2: 0x16fdff260
+ @@ main after test
+ &i1: 0x16fdff2a8
+ &i2: 0x16fdff2a4
+
+*/
+
+/*
  
  // 本当は、アドレスは8byteあるが、記載の便宜上5byteにしている
  
