@@ -1,12 +1,12 @@
-This PR fixes an issue where strokes are not displayed.
 
-As in the attached json file, when "k=0" the stroke is not visible.
-This issue does not occur on lottie-android and I spent a lot of time trying to determine the cause of the issue, 
-so please confirm. 
 
-Also Please let us know if you have any other suggestions.
+This PR fixes an issue where strokes are not visible.
+As in the attached json file, strokes are not displayed when the dash key is "k=0".
+This issue doesn't seem to occur on lottie-android.
 
-json file 
+Please let us know if you have any other suggestions.
+
+part of json file 
 
 ```
                             "bm": 0,
