@@ -1,25 +1,43 @@
 require "./minruby"
 
-def sum(tree)
-    if tree[0] == "lit"
+def evaluate(tree)
+    case tree[0]
+    when "lit"
         tree[1]
-    elsif tree[0] == "+"
-        left = sum(tree[1])
-        right = sum(tree[2])
+    when "+"
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
         left + right
-    elsif tree[0] == "*"
-        left = sum(tree[1])
-        right = sum(tree[2])
+    when "-"
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
+        left + right
+    when "*"
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
         left * right
-    else
-        left = sum(tree[1])
-        right = sum(tree[2])
+    when "/"
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
         left / right
+    when "%"
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
+        left % right
+    else
+        left = evaluate(tree[1])
+        right = evaluate(tree[2])
+        left ** right
     end
 end
 
-tree = minruby_parse("(1 + 2 * 4 + 3 + 4 * 5)/4")
-p(tree)
+# ユーザー入力
+str = gets
 
-answer = sum(tree)
+# 構文木に相当するもの作成
+tree = minruby_parse(str)
+
+# 構文木を解析し、結果を出力
+answer = evaluate(tree)
+
 p(answer)
