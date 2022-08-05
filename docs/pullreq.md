@@ -17,7 +17,7 @@
 - figma
 -->
 
-- [DGA-000](https://photosynth.atlassian.net/browse/DGA-000)
+- 
 
 ## レイアウト
 
