@@ -4,9 +4,13 @@
 - rubyでminRubyプログラムを解読するためのインタプリタプログラムを作成した
 - rubyでそのインタプリタプログラムを起動させ、そのインタプリタプログラム自身をインタプリタプログラムに読み込ませ、そのインタプリタプログラムに、minRubyの言語使用のプログラムを読み込ませる
 
-<img width="616" alt="スクリーンショット 2022-08-06 16 00 52" src="https://user-images.githubusercontent.com/16571394/183238300-44e9ef42-eb41-47e6-8955-1273e2c10f2b.png">
+### イメージ図
 
-<img width="785" alt="スクリーンショット 2022-08-06 16 00 57" src="https://user-images.githubusercontent.com/16571394/183238303-053e2cd1-441e-44f5-9a81-8c6861520f4a.png">
+rubyのインタプリタの仕組みを深く理解してないので、認識違っている部分があるかも？だがおおよそ、このようなこと
+
+<img width="616" alt="スクリーンショット 2022-08-06 16 13 40" src="https://user-images.githubusercontent.com/16571394/183238764-43293927-c89d-437c-b9b4-bb7932e07cc5.png">
+
+<img width="778" alt="スクリーンショット 2022-08-06 16 13 35" src="https://user-images.githubusercontent.com/16571394/183238766-347d553a-cbaa-4c6a-a0ff-21574ae142f3.png">
 
 <img width="811" alt="スクリーンショット 2022-08-06 16 12 01" src="https://user-images.githubusercontent.com/16571394/183238705-816fbc21-877c-4c13-849c-ba04acecb9ea.png">
 
