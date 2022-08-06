@@ -31,3 +31,18 @@ when "aaaaaa"
 when "aaaaaaa"
     p("aは7回")
 end
+
+# フィボナッチ数列のx番目を出力
+def fib(x)
+    if x <= 1
+        x
+    else 
+        fib(x - 1) + fib(x - 2)
+    end
+end
+
+i = 0 
+while i < 20
+    p(fib(i))
+    i = i + 1
+end
