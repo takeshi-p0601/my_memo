@@ -47,8 +47,19 @@ def evaluate(tree, genv, lenv)
             # 組み込み関数
             minruby_call(method[1], args)
         else
-
+            # プログラム側で自作した関数
+            t = 0
+            while method[1][t] != nil
+               lenv[method[1][t]] = args[t] 
+               t = t + 1
+            end
+            evaluate(method[2], genv, lenv)
         end
+    when "func_def"
+        # tree[1] -> 関数ラベル
+        # tree[2] -> 関数の引数
+        # tree[3] -> 関数本体
+        genv[tree[1]] = ["not_buildin", tree[2], tree[3]]
     when "var_assign"
         lenv[tree[1]] = evaluate(tree[2], genv, lenv)
     when "var_ref"
@@ -86,9 +97,11 @@ tree = minruby_parse(str)
 pp(tree)
 
 # 構文木を解析し、結果を出力
+# 関数の環境変数
 genv = {
     "p" => ["buildin", "p"],
     "add" => ["buildin", "sample_add"]
 }
+# 変数の環境変数
 lenv = {}
 answer = evaluate(tree, genv, lenv)
