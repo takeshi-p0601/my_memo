@@ -121,10 +121,7 @@ str = minruby_load()
 
 # 構文木に相当するもの作成
 tree = minruby_parse(str)
-pp(tree)
-p("aa")
 
-# 構文木を解析し、結果を出力
 # 関数の環境変数
 genv = {
     "p" => ["buildin", "p"],
@@ -134,6 +131,9 @@ genv = {
     "minruby_parse" => ["buildin", "minruby_parse"],
     "minruby_call" => ["buildin", "minruby_call"]
 }
+
 # 変数の環境変数
 lenv = {}
+
+# 構文木を解析し、結果を出力
 answer = evaluate(tree, genv, lenv)
