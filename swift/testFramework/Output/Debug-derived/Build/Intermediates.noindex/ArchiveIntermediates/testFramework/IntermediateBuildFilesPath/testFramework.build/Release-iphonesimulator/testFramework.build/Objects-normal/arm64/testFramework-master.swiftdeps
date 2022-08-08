@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "41de9c7cab077a75e974453a7a90ce5023185b1029b246289d30b4718ac31249"
+build_start_time: [1659998255, 957406997]
+build_end_time: [1659998260, 485473155]
+inputs:
+  "/Users/takeshikomori/me/takeshi-1000/testFramework/testFramework/Test.swift": [1659965077, 603497743]

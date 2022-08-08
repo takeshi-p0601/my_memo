@@ -1,0 +1,81 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "5c0654a5bac5d8fd4431f3441cadfc40319bca8e89ac6666bace4834e37227e5"
+    }
+  ],
+  "containerPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/testFramework.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "install",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.5",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "i386",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Products",
+      "derivedDataPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived",
+      "indexDataStoreFolderPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "BUILD_LIBRARY_FOR_DISTRIBUTION" : "YES",
+          "SDKROOT" : "iphonesimulator15.5",
+          "SKIP_INSTALL" : "NO",
+          "TOOLCHAINS" : "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "install",
+          "ASSET_PACK_FOLDER_PATH" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/InstallationBuildProductsLocation/OnDemandResources",
+          "BITCODE_GENERATION_MODE" : "bitcode",
+          "DEPLOYMENT_LOCATION" : "YES",
+          "DEPLOYMENT_POSTPROCESSING" : "YES",
+          "DSTROOT" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/InstallationBuildProductsLocation",
+          "EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE" : "NO",
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ENABLE_DATA_STORE" : "NO",
+          "MESSAGES_APPLICATION_EXTENSION_SUPPORT_FOLDER_PATH" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/BuildProductsPath/MessagesApplicationExtensionSupport",
+          "MESSAGES_APPLICATION_SUPPORT_FOLDER_PATH" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/BuildProductsPath/MessagesApplicationSupport",
+          "OBJROOT" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/IntermediateBuildFilesPath",
+          "SHARED_PRECOMPS_DIR" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/PrecompiledHeaders",
+          "SWIFT_STDLIB_TOOL_UNSIGNED_DESTINATION_DIR" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/BuildProductsPath/SwiftSupport",
+          "SYMROOT" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/BuildProductsPath",
+          "WATCHKIT_2_SUPPORT_FOLDER_PATH" : "/Users/takeshikomori/me/takeshi-1000/testFramework/Output/Debug-derived/Build/Intermediates.noindex/ArchiveIntermediates/testFramework/BuildProductsPath/WatchKitSupport2"
+        }
+      },
+      "toolchainOverride" : "com.apple.dt.toolchain.XcodeDefault"
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "archive",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

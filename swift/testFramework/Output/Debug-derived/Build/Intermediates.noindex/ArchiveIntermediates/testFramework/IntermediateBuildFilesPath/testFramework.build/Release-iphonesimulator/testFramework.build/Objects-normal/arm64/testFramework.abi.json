@@ -1,0 +1,55 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "UIKit",
+      "printedName": "UIKit",
+      "declKind": "Import",
+      "moduleName": "testFramework",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "MyClass",
+      "printedName": "MyClass",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "test",
+          "printedName": "test()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:13testFramework7MyClassC0A0yyFZ",
+          "mangledName": "$s13testFramework7MyClassC0A0yyFZ",
+          "moduleName": "testFramework",
+          "static": true,
+          "declAttributes": [
+            "Final",
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:13testFramework7MyClassC",
+      "mangledName": "$s13testFramework7MyClassC",
+      "moduleName": "testFramework",
+      "declAttributes": [
+        "AccessControl"
+      ],
+      "hasMissingDesignatedInitializers": true
+    }
+  ],
+  "json_format_version": 6
+}
