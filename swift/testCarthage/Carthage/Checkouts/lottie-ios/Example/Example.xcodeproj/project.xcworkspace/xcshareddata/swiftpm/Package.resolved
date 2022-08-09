@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Epoxy",
+        "repositoryURL": "https://github.com/airbnb/epoxy-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "adee6c9fb9cbb9ae8ab6558ee934fb5aa51ab4a0",
+          "version": "0.8.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
