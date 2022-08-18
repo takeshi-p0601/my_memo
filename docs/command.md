@@ -1,5 +1,34 @@
 ※環境m1
 
+- otool -L file名 オブジェクトファイルが使用している共有ライブラリの名前とバージョンを表示する
+
+```
+$ otool -L ~/Library/Developer/Xcode/DerivedData/testCarthage-axdeegilbhjuachdprsmvogvkdvj/Build/Products/Debug-iphonesimulator/testCarthage.app/testCarthage 
+/Users/takeshikomori/Library/Developer/Xcode/DerivedData/testCarthage-axdeegilbhjuachdprsmvogvkdvj/Build/Products/Debug-iphonesimulator/testCarthage.app/testCarthage:
+	@rpath/Lottie.framework/Lottie (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 1860.0.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1311.120.1)
+	/System/Library/Frameworks/SwiftUI.framework/SwiftUI (compatibility version 0.0.0, current version 0.0.0)
+	/usr/lib/swift/libswiftCore.dylib (compatibility version 1.0.0, current version 5.6.0)
+	/usr/lib/swift/libswiftCoreData.dylib (compatibility version 1.0.0, current version 19.0.0, weak)
+	/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 14.0.0, weak)
+	/usr/lib/swift/libswiftCoreGraphics.dylib (compatibility version 1.0.0, current version 3.0.0, weak)
+	/usr/lib/swift/libswiftCoreImage.dylib (compatibility version 1.0.0, current version 2.0.0, weak)
+	/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 0.0.0, weak)
+	/usr/lib/swift/libswiftDataDetection.dylib (compatibility version 1.0.0, current version 697.2.0, weak)
+	/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 11.0.0, weak)
+	/usr/lib/swift/libswiftFileProvider.dylib (compatibility version 1.0.0, current version 399.120.29, weak)
+	/usr/lib/swift/libswiftFoundation.dylib (compatibility version 1.0.0, current version 73.100.0, weak)
+	/usr/lib/swift/libswiftMetal.dylib (compatibility version 1.0.0, current version 261.13.3, weak)
+	/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 2.0.0, weak)
+	/usr/lib/swift/libswiftQuartzCore.dylib (compatibility version 1.0.0, current version 3.0.0, weak)
+	/usr/lib/swift/libswiftUIKit.dylib (compatibility version 1.0.0, current version 5504.0.0, weak)
+	/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib (compatibility version 1.0.0, current version 722.5.0, weak)
+	/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1023.0.0, weak)
+
+```
+
 - otool -f /bin/ls ファットバイナリの詳細を見る
 
 ```
