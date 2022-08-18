@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-char *p="aaa";
+char *ppp="aaa";
 void hogeMaru(void);
 
 #endif /* test1_h */
