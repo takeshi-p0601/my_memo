@@ -10,8 +10,6 @@
 - -L でライブラリのパスを指定
 - -l で実際の読み込むライブラリを登録
 
-参考: https://techbookfest.org/product/5108106740629504 P27あたり
-
 (4) ./HelloWorld すると下記のようなエラーが出る。
 
 ```
@@ -28,3 +26,11 @@ HelloWorld:
 	libhello.dylib (compatibility version 0.0.0, current version 0.0.0)
 	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1311.100.3)
 ```
+
+(5) env DYLD_LIBRARY_PATH=/Users/takeshikomori/me/takeshi-1000/makeLib/dynamicLibrary/makeLibrary ./HelloWorld
+
+- dyldのライブラリパスを指定
+
+参考: https://techbookfest.org/product/5108106740629504 P27あたり
+
+この辺りも参考になりそう https://qiita.com/tasuwo/items/be8188c3645801a00252
