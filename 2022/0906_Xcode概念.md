@@ -21,3 +21,29 @@
 - デフォルトではDebug/Releaseが生成されている
 
 <img width="885" alt="スクリーンショット 2022-09-06 8 55 13" src="https://user-images.githubusercontent.com/16571394/188521777-c82555fe-a8a7-4eb3-878e-3204435360b4.png">
+
+### 環境設定
+
+- Targetを複数作成して、環境設定することもできなくはないが、生成される成果物的にSchemeの管理でよさそう
+- 最低限、本番/Stgで分ける場合は下記のような感じか
+
+#### Build Config
+
+- Debug
+- Release
+- DebugStg
+- AdhocStg
+
+#### 本番スキーム
+
+|Target|Build Config|
+|---|---|
+|A Target|Run: Debug<br>Archive: Release |
+
+※ArchiveのReleaseで、QAの本番確認も兼ねる感じ
+
+#### Stgスキーム
+
+|Target|Build Config|
+|---|---|
+|A Target|Run: DebugStg<br>Archive: AdhocStg |
