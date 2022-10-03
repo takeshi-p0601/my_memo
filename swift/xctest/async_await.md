@@ -4,11 +4,13 @@
 
 ```
 ViewModel {
- var isRequested = false
+  var isRequested = false
 
-func fetchTest() async {
-  let result = await apiClient.fetch()
-  self.isRequested = true
+  func fetchTest() async {
+    let result = await apiClient.fetch()
+    self.isRequested = true
+  }
+
 }
 
 ```
@@ -23,6 +25,7 @@ func testRaceCondition() async {
  
    await viewModel.fetchTest()
    XCTAssertEqual(true, viewModel.isRequested)
+}
 
 ```
 
@@ -39,6 +42,7 @@ func fetchTest() {
      let result = await apiClient.fetch()
      self.isRequested = true
    }
+ }
 }
 
 ```
