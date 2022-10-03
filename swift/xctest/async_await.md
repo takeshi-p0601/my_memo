@@ -70,3 +70,15 @@ func fetchTest() {
         }
     }
 ```
+
+下記みたいなものもできた
+
+```
+DispatchQueue.main.async {
+   let stubICCardInput = StubICCardManager(dummyScanResult: .fail(.failScan))
+   let viewModel2 = ICCardScanViewModel(iccardInput: stubICCardInput, isSelectedOtherCardType: true)
+   viewModel2.scanICCard(alertMessage: "dummy")
+   Thread.sleep(forTimeInterval: 1)
+   XCTAssertEqual(viewModel2.scanFailed, true)
+}
+```
