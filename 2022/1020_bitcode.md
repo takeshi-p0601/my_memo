@@ -20,3 +20,12 @@ https://qiita.com/temoki/items/92999fcede0a7b89760f#%E3%81%AA%E3%81%9Cbitcode%E3
 > 今回、Appleがサポートするデバイスのうち、最後の32bitデバイスであるApple Watch Series 3がサポート対象外となりました。
 > これは64bitへの移行が完了したことを意味し、Bitcodeが役目を終えたということでしょう。
 
+## LLVM  ちょい深掘り
+
+- SwiftでもLLVMの技術を使ってそう
+- Objective-c と clang とかの関係面白い https://codezine.jp/article/detail/8768
+  - 元々GCCをフロントエンドに使っていたこと知らなかった。Clangを作ったことによるAppleの推進面白い
+
+https://www.swift.org/swift-compiler/#compiler-architecture
+
+<img width="863" alt="スクリーンショット 2022-10-20 22 42 41" src="https://user-images.githubusercontent.com/16571394/196965116-7c2b73ee-b2b5-429e-941f-a9c3e37460f5.png">
