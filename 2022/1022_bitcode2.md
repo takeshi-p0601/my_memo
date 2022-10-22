@@ -20,4 +20,11 @@ bitcodeをonにした際のビルド時の成果物の図
 
 ## Crashlytics にアップロードすべき dSYMに関して
 
-[wip]
+- bitcodeをonにした場合は、AppStoreConnect側による最適化で、実行バイナリが再生成され、ビルドUUIDが変わるので、おそらくAppStoreConnectからダウンロードしたdSYMをCrashlytics側にアップロードする必要がありそう
+
+<img width="707" alt="スクリーンショット 2022-10-22 11 00 21" src="https://user-images.githubusercontent.com/16571394/197311915-961272c2-1e59-4f18-af3a-edb602e928a0.png">
+
+- bitcodeをoffにした場合は、Run Scriptで実行される処理でUUIDをあげるっぽい？
+
+<img width="715" alt="スクリーンショット 2022-10-22 11 06 53" src="https://user-images.githubusercontent.com/16571394/197313377-4c86c5d0-6bfb-40e1-bb4c-ef1444e2102b.png">
+
