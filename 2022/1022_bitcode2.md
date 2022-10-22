@@ -26,5 +26,5 @@ bitcodeをonにした際のビルド時の成果物の図
 
 - bitcodeをoffにした場合は、Run Scriptで実行される処理でUUIDをあげるっぽい？
 
-<img width="715" alt="スクリーンショット 2022-10-22 11 06 53" src="https://user-images.githubusercontent.com/16571394/197313377-4c86c5d0-6bfb-40e1-bb4c-ef1444e2102b.png">
+<img width="656" alt="スクリーンショット 2022-10-22 11 25 08" src="https://user-images.githubusercontent.com/16571394/197314990-e9912e6f-23b3-4d62-b786-b40d97f5d936.png">
 
