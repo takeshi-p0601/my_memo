@@ -41,6 +41,7 @@ $ file /bin/ls
 ```
 
 上記のようなものです。
+バイナリはフォーマットがあり、Mach-OやELF、などある
 
 ### 最終的にCPUが命令を読む
 
@@ -363,3 +364,7 @@ Load command 18
  datasize 18848
 
 ```
+
+## メモリの中身
+
+https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/MP/final/part06/node8.html
