@@ -1,0 +1,27 @@
+## 話すこと
+
+- 実行バイナリが生成されるプロセスや、そこで生成されるものを少し深掘りする
+
+## 背景
+
+1年前まで、iOSアプリ開発において、バイナリレベルまで気にしたことや、どういうふうにアプリが実行されるかまで気にしたことはなく
+単純にXcode上で、Swiftファイルを編集して、storyboardでデザイン整えて、Runボタンを押してアプリ起動して、処理的に良さそう、はいOK的なことしか分かってなかった。
+例えば、arm64, x86_64とかを気にすることもなかったし、Compilerというものがどのあたりの、何のことを指しているのかわからなかった。
+
+https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E7%90%86%E8%AB%96%E3%81%A8%E5%AE%9F%E8%A3%85-%E2%80%95%E3%83%A2%E3%83%80%E3%83%B3%E3%81%AA%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9-Noam-Nisan/dp/4873117127 
+上記の本に出会い、そこから派生して色々本や記事を読んでいくにあたって、普段見えている部分とはまた違ったレイヤのを知ることになり、
+その副産物として、上記のarm64やコンパイラとかの話がなんとなくわかるようになった。
+この前のbitcodeの話でもそうだが、上記の知識をベースとして、理屈付きで判断できる事態が増えたので、そういった知識があると役に立つこともあるかなと考え
+この記事を書いてみる。
+
+### 参考書籍
+
+基本的には完全読破した本は一冊もないが、かいつまんで読んだ本が多数あるので、その辺りを紹介してみる
+
+https://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E8%AA%AD%E3%82%808086%E2%80%9516%E3%83%93%E3%83%83%E3%83%88%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%92%E3%82%84%E3%81%95%E3%81%97%E3%81%8F%E8%AA%9E%E3%82%8B-%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%96%E3%83%83%E3%82%AF%E3%82%B9-%E8%92%B2%E5%9C%B0-%E8%BC%9D%E5%B0%9A/dp/4871482456
+https://www.amazon.co.jp/%EF%BC%BB%E8%A9%A6%E3%81%97%E3%81%A6%E7%90%86%E8%A7%A3%EF%BC%BDLinux%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF-%EF%BD%9E%E5%AE%9F%E9%A8%93%E3%81%A8%E5%9B%B3%E8%A7%A3%E3%81%A7%E5%AD%A6%E3%81%B6OS%E3%81%A8%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98-%E6%AD%A6%E5%86%85-%E8%A6%9A-ebook/dp/B079YJS1J1/ref=sr_1_4?keywords=linux%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF&qid=1667010269&qu=eyJxc2MiOiIyLjg5IiwicXNhIjoiMi4xOCIsInFzcCI6IjIuMjUifQ%3D%3D&s=books&sprefix=linux%2Cstripbooks%2C252&sr=1-4
+https://www.amazon.co.jp/%E3%83%AA%E3%83%B3%E3%82%AB%E3%83%BB%E3%83%AD%E3%83%BC%E3%83%80%E5%AE%9F%E8%B7%B5%E9%96%8B%E7%99%BA%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%E2%80%95%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E5%BF%85%E9%A0%88%E3%81%AE%E6%8A%80%E8%A1%93-COMPUTER-TECHNOLOGY-%E5%9D%82%E4%BA%95-%E5%BC%98%E4%BA%AE/dp/4789838072/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=28MEZTKHG6U8K&keywords=%E3%83%AA%E3%83%B3%E3%82%AB+%E3%83%AD%E3%83%BC%E3%83%80&qid=1667010290&qu=eyJxc2MiOiIwLjAwIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=%E3%83%AA%E3%83%B3%E3%82%AB+%E3%83%AD%E3%83%BC%E3%83%80%2Cstripbooks%2C378&sr=1-1
+https://www.sigbus.info/compilerbook
+
+## 実行バイナリが生成されるまで
+
