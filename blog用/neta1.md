@@ -31,6 +31,17 @@ https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%
 
 ### そもそもバイナリとは何か
 
+```
+$ file /bin/ls
+/bin/ls: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64
+- Mach-O 64-bit executable x86_64] [arm64e:Mach-O 64-bit executable arm64e
+- Mach-O 64-bit executable arm64e]
+/bin/ls (for architecture x86_64):	Mach-O 64-bit executable x86_64
+/bin/ls (for architecture arm64e):	Mach-O 64-bit executable arm64e
+```
+
+上記のようなものです。
+
 ### 最終的にCPUが命令を読む
 
 ### バイナリの生成過程
@@ -48,4 +59,307 @@ iOS開発においては、実行時にではなくあらかじめ機械語命�
 
 iOS開発においては、実行時にではなくあらかじめ機械語命令が記載されたバイナリというものを作っておいて、そのバイナリを読み込ませる
 
-# aa
+# バイナリがロードされること
+
+```
+$ otool -l /bin/ls
+
+$ otool -l /bin/ls
+/bin/ls:
+Load command 0
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __PAGEZERO
+   vmaddr 0x0000000000000000
+   vmsize 0x0000000100000000
+  fileoff 0
+ filesize 0
+  maxprot 0x00000000
+ initprot 0x00000000
+   nsects 0
+    flags 0x0
+Load command 1
+      cmd LC_SEGMENT_64
+  cmdsize 472
+  segname __TEXT
+   vmaddr 0x0000000100000000
+   vmsize 0x0000000000008000
+  fileoff 0
+ filesize 32768
+  maxprot 0x00000005
+ initprot 0x00000005
+   nsects 5
+    flags 0x0
+Section
+  sectname __text
+   segname __TEXT
+      addr 0x0000000100003830
+      size 0x0000000000003c10
+    offset 14384
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __auth_stubs
+   segname __TEXT
+      addr 0x0000000100007440
+      size 0x0000000000000520
+    offset 29760
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x80000408
+ reserved1 0 (index into indirect symbol table)
+ reserved2 16 (size of stubs)
+Section
+  sectname __const
+   segname __TEXT
+      addr 0x0000000100007960
+      size 0x00000000000000dc
+    offset 31072
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cstring
+   segname __TEXT
+      addr 0x0000000100007a3c
+      size 0x00000000000004e9
+    offset 31292
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __unwind_info
+   segname __TEXT
+      addr 0x0000000100007f28
+      size 0x00000000000000d8
+    offset 32552
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Load command 2
+      cmd LC_SEGMENT_64
+  cmdsize 312
+  segname __DATA_CONST
+   vmaddr 0x0000000100008000
+   vmsize 0x0000000000004000
+  fileoff 32768
+ filesize 16384
+  maxprot 0x00000003
+ initprot 0x00000003
+   nsects 3
+    flags 0x10
+Section
+  sectname __auth_got
+   segname __DATA_CONST
+      addr 0x0000000100008000
+      size 0x0000000000000290
+    offset 32768
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 82 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __got
+   segname __DATA_CONST
+      addr 0x0000000100008290
+      size 0x0000000000000030
+    offset 33424
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 164 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __const
+   segname __DATA_CONST
+      addr 0x00000001000082c0
+      size 0x0000000000000268
+    offset 33472
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Load command 3
+      cmd LC_SEGMENT_64
+  cmdsize 312
+  segname __DATA
+   vmaddr 0x000000010000c000
+   vmsize 0x0000000000004000
+  fileoff 49152
+ filesize 16384
+  maxprot 0x00000003
+ initprot 0x00000003
+   nsects 3
+    flags 0x0
+Section
+  sectname __data
+   segname __DATA
+      addr 0x000000010000c000
+      size 0x0000000000000020
+    offset 49152
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __common
+   segname __DATA
+      addr 0x000000010000c020
+      size 0x00000000000000b0
+    offset 0
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Section
+  sectname __bss
+   segname __DATA
+      addr 0x000000010000c0d0
+      size 0x0000000000000150
+    offset 0
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Load command 4
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __LINKEDIT
+   vmaddr 0x0000000100010000
+   vmsize 0x0000000000008000
+  fileoff 65536
+ filesize 23200
+  maxprot 0x00000001
+ initprot 0x00000001
+   nsects 0
+    flags 0x0
+Load command 5
+            cmd LC_DYLD_INFO_ONLY
+        cmdsize 48
+     rebase_off 0
+    rebase_size 0
+       bind_off 65536
+      bind_size 1128
+  weak_bind_off 0
+ weak_bind_size 0
+  lazy_bind_off 0
+ lazy_bind_size 0
+     export_off 66664
+    export_size 32
+Load command 6
+     cmd LC_SYMTAB
+ cmdsize 24
+  symoff 66776
+   nsyms 90
+  stroff 68896
+ strsize 984
+Load command 7
+            cmd LC_DYSYMTAB
+        cmdsize 80
+      ilocalsym 0
+      nlocalsym 1
+     iextdefsym 1
+     nextdefsym 1
+      iundefsym 2
+      nundefsym 88
+         tocoff 0
+           ntoc 0
+      modtaboff 0
+        nmodtab 0
+   extrefsymoff 0
+    nextrefsyms 0
+ indirectsymoff 68216
+  nindirectsyms 170
+      extreloff 0
+        nextrel 0
+      locreloff 0
+        nlocrel 0
+Load command 8
+          cmd LC_LOAD_DYLINKER
+      cmdsize 32
+         name /usr/lib/dyld (offset 12)
+Load command 9
+     cmd LC_UUID
+ cmdsize 24
+    uuid AB297189-4948-396B-9B89-565F705100BD
+Load command 10
+      cmd LC_BUILD_VERSION
+  cmdsize 32
+ platform 1
+    minos 11.0
+      sdk 12.6
+   ntools 1
+     tool 3
+  version 760.0
+Load command 11
+      cmd LC_SOURCE_VERSION
+  cmdsize 16
+  version 353.100.22
+Load command 12
+       cmd LC_MAIN
+   cmdsize 24
+  entryoff 14992
+ stacksize 0
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libutil.dylib (offset 24)
+   time stamp 2 Thu Jan  1 09:00:02 1970
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 14
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libncurses.5.4.dylib (offset 24)
+   time stamp 2 Thu Jan  1 09:00:02 1970
+      current version 5.4.0
+compatibility version 5.4.0
+Load command 15
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libSystem.B.dylib (offset 24)
+   time stamp 2 Thu Jan  1 09:00:02 1970
+      current version 1311.120.1
+compatibility version 1.0.0
+Load command 16
+      cmd LC_FUNCTION_STARTS
+  cmdsize 16
+  dataoff 66696
+ datasize 80
+Load command 17
+      cmd LC_DATA_IN_CODE
+  cmdsize 16
+  dataoff 66776
+ datasize 0
+Load command 18
+      cmd LC_CODE_SIGNATURE
+  cmdsize 16
+  dataoff 69888
+ datasize 18848
+
+```
