@@ -1,3 +1,5 @@
+忘れそうなので、参照下そのままコピペだが貼っとく
+
 ### Static Library
 
 - 拡張子は .a
@@ -12,3 +14,5 @@
 - 外部ツール (ダイナミックリンカ, macOS の場合は dyld) によって、必要に応じてライブラリがロードされる
 - アプリサイズが小さくなる
 - アプリ側の更新をしなくとも Dynamic Library の更新が可能
+
+参考: https://qiita.com/tasuwo/items/be8188c3645801a00252#static-library-vs-dynamic-library
