@@ -28,7 +28,7 @@ $ otool -L ~/Library/Developer/Xcode/DerivedData/testNavi-ewiibuofioktglftgafsyw
 
 Xcode14.0.1の環境で下記
 
-Xcode14.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profile/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit
+Xcode14.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit
 
 `Xcode14.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profile/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot` 
 
@@ -36,6 +36,16 @@ Xcode14.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/Cor
 
 参考: https://stackoverflow.com/questions/24544916/cannot-find-uikit-framework
 
+ちなみに、動的ライブラリである
+
+```
+$ file /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit 
+/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit dynamically linked shared library x86_64
+- Mach-O 64-bit dynamically linked shared library x86_64] [arm64:Mach-O 64-bit dynamically linked shared library arm64
+- Mach-O 64-bit dynamically linked shared library arm64]
+/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit (for architecture x86_64):	Mach-O 64-bit dynamically linked shared library x86_64
+/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit (for architecture arm64):	Mach-O 64-bit dynamically linked shared library arm64
+```
 
 下記も時間がるとき見てみる
 
