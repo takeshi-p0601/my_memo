@@ -1,0 +1,458 @@
+$ xcodebuild -project ~/me/takeshi-1000/testNavi/testNavi.xcodeproj -target testNavi -sdk iphonesimulator -configuration Debug build
+2022-10-29 12:47:42.518 xcodebuild[74739:1158603] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+2022-10-29 12:47:42.518 xcodebuild[74739:1158603] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+Command line invocation:
+    /Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/xcodebuild -project /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi.xcodeproj -target testNavi -sdk iphonesimulator -configuration Debug build
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    SDKROOT = iphonesimulator15.5
+
+note: Using new build system
+note: Planning
+Analyze workspace
+
+Create build description
+Build description signature: dc837e41d482e965af353560c804458b
+Build description path: /Users/takeshikomori/me/takeshi-1000/testNavi/build/XCBuildData/dc837e41d482e965af353560c804458b-desc.xcbuild
+
+note: Build preparation complete
+note: Building targets in dependency order
+CreateBuildDirectory /Users/takeshikomori/me/takeshi-1000/testNavi/build
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi.xcodeproj
+    builtin-create-build-directory /Users/takeshikomori/me/takeshi-1000/testNavi/build
+
+CreateBuildDirectory /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi.xcodeproj
+    builtin-create-build-directory /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator
+
+warning: ONLY_ACTIVE_ARCH=YES requested with multiple ARCHS and no active architecture could be computed; building for all applicable architectures (in target 'testNavi' from project 'testNavi')
+MkDir /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /bin/mkdir -p /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/Entitlements-Simulated.plist (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/Entitlements-Simulated.plist
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/Entitlements.plist (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app-Simulated.xcent (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "RJTYFV5RFU.tk.testNavi";
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app-Simulated.xcent
+
+ProcessProductPackaging "" /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app.xcent (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    
+    Entitlements:
+    
+    {
+    "com.apple.security.get-task-allow" = 1;
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app.xcent
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-non-framework-target-headers.hmap (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/all-product-headers.yaml (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.LinkFileList (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.LinkFileList
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.SwiftFileList (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.SwiftFileList
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-OutputFileMap.json (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.SwiftFileList (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.SwiftFileList
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.LinkFileList (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.LinkFileList
+
+WriteAuxiliaryFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-OutputFileMap.json (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    write-file /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-OutputFileMap.json
+
+CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export DEVELOPER_DIR\=/Applications/Xcode13.4.1.app/Contents/Developer
+    export SDKROOT\=/Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk
+
+    コンパイラ
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc 
+    -incremental 
+    -module-name testNavi 
+    -Onone 
+    -enable-batch-mode 
+    -enforce-exclusivity\=checked @/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.SwiftFileList 
+    -DDEBUG 
+    -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk 
+    -target x86_64-apple-ios15.5-simulator 
+    -g -Xfrontend -serialize-debugging-options 
+    -enable-testing 
+    -swift-version 5 
+    -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -emit-localized-strings 
+    -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64 
+    -c 
+    -j8 
+    -output-file-map /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-OutputFileMap.json 
+    -parseable-output 
+    -serialize-diagnostics 
+    -emit-dependencies 
+    -emit-module 
+    -emit-module-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftmodule 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap 
+    -Xcc -iquote 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap 
+    -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources 
+    -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-Swift.h 
+    -working-directory /Users/takeshikomori/me/takeshi-1000/testNavi
+
+EmitSwiftModule normal x86_64 (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend 
+    -frontend 
+    -emit-module 
+    -experimental-skip-non-inlinable-function-bodies-without-types 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift 
+    -target x86_64-apple-ios15.5-simulator 
+    -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk 
+    -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -enable-testing 
+    -g 
+    -swift-version 5 
+    -enforce-exclusivity\=checked 
+    -Onone -D DEBUG 
+    -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver 
+    -serialize-debugging-options 
+    -Xcc -working-directory 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi 
+    -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift 
+    -enable-anonymous-context-mangled-names 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap 
+    -Xcc -iquote 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap 
+    -Xcc -iquote 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources 
+    -Xcc -DDEBUG\=1 
+    -module-name testNavi 
+    -target-sdk-version 15.5 
+    -emit-module-doc-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftdoc 
+    -emit-module-source-info-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftsourceinfo 
+    -emit-objc-header-path 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-Swift.h 
+    -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftmodule 
+    -emit-abi-descriptor-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.abi.json
+
+CompileSwift normal x86_64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend 
+    -frontend 
+    -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift 
+    -primary-file 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift 
+    -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Test.d 
+    -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Test.swiftdeps 
+    -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Test.dia 
+    -emit-localized-strings 
+    -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64 
+    -target x86_64-apple-ios15.5-simulator 
+    -enable-objc-interop 
+    -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk 
+    -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -enable-testing 
+    -g 
+    -swift-version 5 
+    -enforce-exclusivity\=checked 
+    -Onone 
+    -D DEBUG 
+    -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver 
+    -serialize-debugging-options 
+    -Xcc -working-directory 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi 
+    -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift 
+    -enable-anonymous-context-mangled-names 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap 
+    -Xcc -iquote 
+    -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap 
+    -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 
+    -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources 
+    -Xcc -DDEBUG\=1 
+    -module-name testNavi 
+    -target-sdk-version 15.5 
+    -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Test.o
+
+CompileSwift normal x86_64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/SceneDelegate.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/SceneDelegate.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/SceneDelegate.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64 -target x86_64-apple-ios15.5-simulator -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/SceneDelegate.o
+
+CompileSwift normal x86_64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/ViewController.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/ViewController.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/ViewController.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64 -target x86_64-apple-ios15.5-simulator -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/ViewController.o
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:22: warning: string interpolation produces a debug description for an optional value; did you mean to make this explicit?
+        print("@@@ \(navigationController?.children)")
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:44: note: use 'String(describing:)' to silence this warning
+        print("@@@ \(navigationController?.children)")
+                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+                     String(describing:            )
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:44: note: provide a default value to avoid this warning
+        print("@@@ \(navigationController?.children)")
+                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+                                                    ?? <#default value#>
+
+CompileSwift normal x86_64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/AppDelegate.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/AppDelegate.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/AppDelegate.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64 -target x86_64-apple-ios15.5-simulator -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/x86_64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/AppDelegate.o
+
+CompileSwiftSources normal arm64 com.apple.xcode.tools.swift.compiler (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export DEVELOPER_DIR\=/Applications/Xcode13.4.1.app/Contents/Developer
+    export SDKROOT\=/Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name testNavi -Onone -enable-batch-mode -enforce-exclusivity\=checked @/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.SwiftFileList -DDEBUG -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -target arm64-apple-ios15.5-simulator -g -Xfrontend -serialize-debugging-options -enable-testing -swift-version 5 -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64 -c -j8 -output-file-map /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftmodule -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-Swift.h -working-directory /Users/takeshikomori/me/takeshi-1000/testNavi
+
+CompileSwift normal arm64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/ViewController.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/ViewController.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/ViewController.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64 -target arm64-apple-ios15.5-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/ViewController.o
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:22: warning: string interpolation produces a debug description for an optional value; did you mean to make this explicit?
+        print("@@@ \(navigationController?.children)")
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:44: note: use 'String(describing:)' to silence this warning
+        print("@@@ \(navigationController?.children)")
+                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+                     String(describing:            )
+/Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift:16:44: note: provide a default value to avoid this warning
+        print("@@@ \(navigationController?.children)")
+                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+                                                    ?? <#default value#>
+
+CompileSwift normal arm64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Test.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Test.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Test.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64 -target arm64-apple-ios15.5-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Test.o
+
+CompileSwift normal arm64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/SceneDelegate.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/SceneDelegate.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/SceneDelegate.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64 -target arm64-apple-ios15.5-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/SceneDelegate.o
+
+CompileSwift normal arm64 /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift -primary-file /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -emit-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/AppDelegate.d -emit-reference-dependencies-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/AppDelegate.swiftdeps -serialize-diagnostics-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/AppDelegate.dia -emit-localized-strings -emit-localized-strings-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64 -target arm64-apple-ios15.5-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/AppDelegate.o
+
+EmitSwiftModule normal arm64 (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -emit-module -experimental-skip-non-inlinable-function-bodies-without-types /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/ViewController.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Test.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/AppDelegate.swift /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/SceneDelegate.swift -target arm64-apple-ios15.5-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk -I /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -F /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator -enable-testing -g -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver -serialize-debugging-options -Xcc -working-directory -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-generated-files.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-own-target-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi-project-headers.hmap -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/include -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources-normal/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/arm64 -Xcc -I/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources -Xcc -DDEBUG\=1 -module-name testNavi -target-sdk-version 15.5 -emit-module-doc-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftdoc -emit-module-source-info-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftsourceinfo -emit-objc-header-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-Swift.h -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftmodule -emit-abi-descriptor-path /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.abi.json
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftdoc (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftdoc /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftmodule (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftmodule /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Ld /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Binary/testNavi normal arm64 (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+    -target arm64-apple-ios15.5-simulator 
+    -isysroot /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk 
+     -L/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator
+     -F/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -filelist /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.LinkFileList 
+    -Xlinker -rpath 
+    -Xlinker @executable_path/Frameworks 
+    -dead_strip 
+    -Xlinker -object_path_lto
+     -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi_lto.o 
+     -Xlinker -export_dynamic 
+     -Xlinker -no_deduplicate 
+     -Xlinker -objc_abi_version 
+     -Xlinker 2 -fobjc-link-runtime 
+      -L/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator 
+      -L/usr/lib/swift 
+    -Xlinker -add_ast_path 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftmodule 
+    -Xlinker -sectcreate 
+    -Xlinker __TEXT 
+    -Xlinker __entitlements 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app-Simulated.xcent 
+    -Xlinker -no_adhoc_codesign 
+    -Xlinker -dependency_info 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi_dependency_info.dat 
+    -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Binary/testNavi
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftsourceinfo (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi.swiftsourceinfo /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftMergeGeneratedHeaders /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/testNavi-Swift.h /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-Swift.h /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-Swift.h (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-swiftHeaderTool -arch arm64 /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/testNavi-Swift.h -arch x86_64 /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi-Swift.h -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/DerivedSources/testNavi-Swift.h
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftdoc (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftdoc /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftmodule (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftmodule /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+Copy /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftsourceinfo (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftsourceinfo /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+Ld /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Binary/testNavi normal x86_64 (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+    -target x86_64-apple-ios15.5-simulator 
+    -isysroot /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk 
+     -L/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+     -F/Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator 
+    -filelist /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.LinkFileList
+    -Xlinker -rpath 
+    -Xlinker @executable_path/Frameworks 
+    -dead_strip 
+    -Xlinker -object_path_lto 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi_lto.o 
+    -Xlinker -export_dynamic 
+    -Xlinker -no_deduplicate 
+    -Xlinker -objc_abi_version 
+    -Xlinker 2 -fobjc-link-runtime 
+     -L/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator 
+     -L/usr/lib/swift 
+    -Xlinker -add_ast_path 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi.swiftmodule 
+    -Xlinker -sectcreate 
+    -Xlinker __TEXT 
+    -Xlinker __entitlements 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app-Simulated.xcent 
+    -Xlinker -no_adhoc_codesign 
+    -Xlinker -dependency_info 
+    -Xlinker /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/testNavi_dependency_info.dat 
+    -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Binary/testNavi
+
+CreateUniversalBinary /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/testNavi normal arm64\ x86_64 (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo 
+    -create 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/arm64/Binary/testNavi 
+     /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Objects-normal/x86_64/Binary/testNavi 
+    -output /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/testNavi
+
+CompileStoryboard /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Base.lproj/LaunchScreen.storyboard (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export XCODE_DEVELOPER_USR_PATH\=/Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/..
+    /Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module testNavi --output-partial-info-plist /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/LaunchScreen-SBPartialInfo.plist --auto-activate-custom-fonts --target-device iphone --target-device ipad --minimum-deployment-target 15.5 --output-format human-readable-text --compilation-directory /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Base.lproj/LaunchScreen.storyboard
+
+CompileStoryboard /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Base.lproj/Main.storyboard (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export XCODE_DEVELOPER_USR_PATH\=/Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/..
+    /Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module testNavi --output-partial-info-plist /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/Main-SBPartialInfo.plist --auto-activate-custom-fonts --target-device iphone --target-device ipad --minimum-deployment-target 15.5 --output-format human-readable-text --compilation-directory /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Base.lproj/Main.storyboard
+
+CompileAssetCatalog /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Assets.xcassets (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/assetcatalog_dependencies --output-partial-info-plist /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 15.5 --platform iphonesimulator --compile /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Assets.xcassets
+/* com.apple.actool.compilation-results */
+/Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/assetcatalog_generated_info.plist
+
+
+ProcessInfoPlistFile /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/Info.plist /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Info.plist (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-infoPlistUtility /Users/takeshikomori/me/takeshi-1000/testNavi/testNavi/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/LaunchScreen-SBPartialInfo.plist -additionalcontentfile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/Main-SBPartialInfo.plist -additionalcontentfile /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/assetcatalog_generated_info.plist -o /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/Info.plist
+
+LinkStoryboards (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export XCODE_DEVELOPER_USR_PATH\=/Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/..
+    /Applications/Xcode13.4.1.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module testNavi --target-device iphone --target-device ipad --minimum-deployment-target 15.5 --output-format human-readable-text --link /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/LaunchScreen.storyboardc /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/Base.lproj/Main.storyboardc
+
+CopySwiftLibs /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export CODESIGN_ALLOCATE\=/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export DEVELOPER_DIR\=/Applications/Xcode13.4.1.app/Contents/Developer
+    export SDKROOT\=/Applications/Xcode13.4.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.5.sdk
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/testNavi --scan-folder /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/Frameworks --scan-folder /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/PlugIns --scan-folder /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/SystemExtensions --platform iphonesimulator --toolchain /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+CodeSign /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    export CODESIGN_ALLOCATE\=/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+    Signing Identity:     "-"
+    
+    /usr/bin/codesign --force --sign - --entitlements /Users/takeshikomori/me/takeshi-1000/testNavi/build/testNavi.build/Debug-iphonesimulator/testNavi.build/testNavi.app.xcent --timestamp\=none --generate-entitlement-der /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app
+
+RegisterExecutionPolicyException /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    builtin-RegisterExecutionPolicyException /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app
+
+Touch /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app (in target 'testNavi' from project 'testNavi')
+    cd /Users/takeshikomori/me/takeshi-1000/testNavi
+    /usr/bin/touch -c /Users/takeshikomori/me/takeshi-1000/testNavi/build/Debug-iphonesimulator/testNavi.app
+
+** BUILD SUCCEEDED **
