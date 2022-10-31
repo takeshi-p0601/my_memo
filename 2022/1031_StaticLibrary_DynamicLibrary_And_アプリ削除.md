@@ -1,3 +1,5 @@
+## バイナリに結合するライブラリの種類
+
 忘れそうなので、参照下そのままコピペだが貼っとく
 
 ### Static Library
@@ -16,3 +18,7 @@
 - アプリ側の更新をしなくとも Dynamic Library の更新が可能
 
 参考: https://qiita.com/tasuwo/items/be8188c3645801a00252#static-library-vs-dynamic-library
+
+## アプリ削除
+
+https://help.apple.com/app-store-connect/#/dev28d17ed35 を見ればよさそう
