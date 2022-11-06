@@ -1,0 +1,33 @@
+$ swiftc -v main.swift 
+Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+Target: arm64-apple-macosx12.0
+
+// オブジェクトファイルにしている
+/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend 
+ -frontend 
+ -c 
+ -primary-file main.swift 
+ -target arm64-apple-macosx12.0 
+ -Xllvm -aarch64-use-tbi 
+ -enable-objc-interop 
+ -stack-check 
+ -sdk /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk 
+ -color-diagnostics 
+ -new-driver-path /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-driver 
+ -resource-dir /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift 
+ -module-name main 
+ -target-sdk-version 12.3 
+ -o /var/folders/4c/0qwhzzgx3q1_455_mgl56x080000gp/T/TemporaryDirectory.0mUAEu/main-1.o
+ 
+ // バイナリにしている
+/Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld 
+ /var/folders/4c/0qwhzzgx3q1_455_mgl56x080000gp/T/TemporaryDirectory.0mUAEu/main-1.o 
+ /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/clang/lib/darwin/libclang_rt.osx.a 
+ -syslibroot /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk 
+ -lobjc 
+ -lSystem 
+ -arch arm64 
+ -L /Applications/Xcode13.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx 
+ -L /Applications/Xcode13.4.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/swift 
+ -platform_version macos 12.0.0 12.3.0 
+ -o main
