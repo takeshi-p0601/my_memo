@@ -374,3 +374,4 @@ https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/MP/final/part06/node8.html
 
 https://engineering.mercari.com/blog/entry/2019-12-16-081047/
 https://plum-plus.jp/2021/02/08/dsym-bitcode%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/
+https://bigjapan.slack.com/archives/C039LGZ7J4Q/p1667715093704949
