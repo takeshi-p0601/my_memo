@@ -368,3 +368,9 @@ Load command 18
 ## メモリの中身
 
 https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/MP/final/part06/node8.html
+
+
+## メモ
+
+https://engineering.mercari.com/blog/entry/2019-12-16-081047/
+https://plum-plus.jp/2021/02/08/dsym-bitcode%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/
