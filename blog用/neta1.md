@@ -381,3 +381,5 @@ https://bigjapan.slack.com/archives/C039LGZ7J4Q/p1667715093704949
 https://www.wwdcnotes.com/notes/wwdc18/415/
 
 https://qiita.com/tasuwo/items/be8188c3645801a00252#fn3
+
+https://medium.com/eureka-engineering/create-merged-framework-to-cut-appstartuptime-72ee67b2bbab
