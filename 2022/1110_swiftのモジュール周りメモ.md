@@ -7,9 +7,9 @@
 
 
 添付のような依存が発生しており、main.swiftがメイン関数を呼ぶ方のファイルだとした場合、
-swiftcコンパイラドライバにmain.swift / hoge.swift両方渡せば特にモジュールかする必要ないが、
+swiftcコンパイラドライバにmain.swift / hoge.swift両方渡せば特にモジュール化する必要ないが、
 それぞれでコンパイルする必要がある場合、main.swift側はhoge.swiftのヘッダーを持つ必要があり、
-その仕組みとして、依存側のコードをモジュールを用意し、モジュールを参照するように、メイン側で明示する必要がありそう。
+その仕組みとして、依存側のコードをモジュールとして用意し、モジュールを参照するようにメイン側で明示する(importする)必要がありそう。
 
 <img width="335" alt="スクリーンショット 2022-11-10 9 58 43" src="https://user-images.githubusercontent.com/16571394/200974448-bfab1cb8-3f0d-4245-950f-ff2ca1425de0.png">
 
@@ -22,3 +22,5 @@ swiftcコンパイラドライバにmain.swift / hoge.swift両方渡せば特に
 ```
 $ swiftc -emit-object -parse-as-library a1.swift -module-name a
 ```
+
+またメイン側のソースをモジュール化できるっぽいな
