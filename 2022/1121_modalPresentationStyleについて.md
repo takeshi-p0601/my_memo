@@ -39,7 +39,11 @@ SwiftUIでは、上記の影響を受けることがある。
 大事なことは、下記
 
 - onAppear: Viewの階層にViewが追加された時、通知されてしまう
-- onDisAppear: Viewの階層にViewが追加された時、通知されてしまう
+- onDisAppear: Viewの階層にViewが削除された時、通知されてしまう
+
+なぜ問題が起こったのか、
+- fullScreenによるモーダル遷移でView階層から削除されること、モーダルを閉じた時に新たにView階層に追加されることを知らなかったこと
+- 上記の挙動がSwiftUIのonAppear / onDissappearに影響すること
 
 ```
 struct TestView: View {
