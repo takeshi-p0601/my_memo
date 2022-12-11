@@ -1,0 +1,1402 @@
+[takeshikomori@MacBook-Pro-2:~/me/takeshi-1000/swift-project/swift][main]
+$ utils/build-script --skip-build-benchmarks \
+  --skip-ios --skip-watchos --skip-tvos --swift-darwin-supported-archs "$(uname -m)" \
+  --sccache --release-debuginfo --swift-disable-dead-stripping --bootstrapping=off
+[utils/build-script] NOTE: Using toolchain default
++ /usr/libexec/PlistBuddy -c 'Print :SupportedTargets:macosx:Archs' /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/SDKSettings.plist
+Ensuring the sccache server is running...
++ /opt/homebrew/bin/sccache --show-stats
++ mkdir -p /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert
+--- Building earlyswiftsyntax ---
++ mkdir -p /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64
++ pushd /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64
++ env /opt/homebrew/bin/cmake -G Ninja -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DCMAKE_CXX_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCMAKE_Swift_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -DCMAKE_LIBTOOL:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -DCMAKE_AR:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar -DCMAKE_RANLIB:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -DLLVM_VERSION_MAJOR:STRING=13 -DLLVM_VERSION_MINOR:STRING=0 -DLLVM_VERSION_PATCH:STRING=0 -DCLANG_VERSION_MAJOR:STRING=13 -DCLANG_VERSION_MINOR:STRING=0 -DCLANG_VERSION_PATCH:STRING=0 -DCMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo -DBUILD_SHARED_LIBS:STRING=YES '-DCMAKE_C_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' '-DCMAKE_CXX_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' -DCMAKE_TOOLCHAIN_FILE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64/BuildScriptToolchain.cmake -DCMAKE_INSTALL_PREFIX:PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr -DSWIFT_DARWIN_SUPPORTED_ARCHS:STRING=arm64 -DSWIFT_DISABLE_DEAD_STRIPPING:BOOL=TRUE -DSWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax '-DCMAKE_IGNORE_PATH=/usr/lib;/usr/local/lib;/lib' -DPKG_CONFIG_EXECUTABLE=/usr/bin/false /Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- The Swift compiler identification is Apple 5.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working Swift compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc
+-- Check for working Swift compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc - works
+-- Module triple: arm64-apple-macos
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLANG_VERSION_MAJOR
+    CLANG_VERSION_MINOR
+    CLANG_VERSION_PATCH
+    CMAKE_CXX_COMPILER
+    CMAKE_CXX_FLAGS
+    CMAKE_LIBTOOL
+    LLVM_VERSION_MAJOR
+    LLVM_VERSION_MINOR
+    LLVM_VERSION_PATCH
+    PKG_CONFIG_EXECUTABLE
+    SWIFT_DARWIN_SUPPORTED_ARCHS
+    SWIFT_DISABLE_DEAD_STRIPPING
+    SWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE
+
+
+-- Build files have been written to: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64
++ popd
++ env /opt/homebrew/bin/cmake --build /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64 --config RelWithDebInfo -- all
+[19/33][ 57%][84.564s] Linking Swift shared library lib/swift/host/libSwiftParserDiagnostics.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax/Sources/SwiftParserDiagnostics/DiagnosticExtensions.swift:156:7: warning: switch covers known cases, but 'TriviaPiece' may have additional unknown values
+      switch piece {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax/Sources/SwiftParserDiagnostics/DiagnosticExtensions.swift:156:7: note: handle unknown values using "@unknown default"
+      switch piece {
+      ^
+[33/33][100%][96.077s] Linking Swift shared library lib/swift/host/lib_SwiftSyntaxMacros.dylib
+--- Building earlyswiftdriver ---
++ /Users/takeshikomori/me/takeshi-1000/swift-project/swift-driver/Utilities/build-script-helper.py build --package-path /Users/takeshikomori/me/takeshi-1000/swift-project/swift-driver --build-path /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftdriver-macosx-arm64 --configuration release --toolchain /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr --ninja-bin /opt/homebrew/bin/ninja --cmake-bin /opt/homebrew/bin/cmake --local_compiler_build
+Building Swift Driver dependency: llbuild
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_C_COMPILER
+
+
+Building Swift Driver dependency: Swift System
+Building Swift Driver dependency: TSC
+Building Swift Driver dependency: Argument Parser
+Building Swift Driver dependency: Yams
+Building Swift Driver for target: arm64-apple-macosx10.15
+--- Building cmark ---
++ mkdir -p /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64
++ pushd /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64
++ env /opt/homebrew/bin/cmake -G Ninja -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DCMAKE_CXX_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCMAKE_Swift_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -DCMAKE_LIBTOOL:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -DCMAKE_AR:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar -DCMAKE_RANLIB:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -DLLVM_VERSION_MAJOR:STRING=13 -DLLVM_VERSION_MINOR:STRING=0 -DLLVM_VERSION_PATCH:STRING=0 -DCLANG_VERSION_MAJOR:STRING=13 -DCLANG_VERSION_MINOR:STRING=0 -DCLANG_VERSION_PATCH:STRING=0 -DCMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo -DCMARK_THREADING=ON '-DCMAKE_C_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' '-DCMAKE_CXX_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' -DCMAKE_TOOLCHAIN_FILE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64/BuildScriptToolchain.cmake -DSWIFT_DARWIN_SUPPORTED_ARCHS:STRING=arm64 -DSWIFT_DISABLE_DEAD_STRIPPING:BOOL=TRUE -DSWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax '-DCMAKE_IGNORE_PATH=/usr/lib;/usr/local/lib;/lib' -DPKG_CONFIG_EXECUTABLE=/usr/bin/false /Users/takeshikomori/me/takeshi-1000/swift-project/cmark
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- The CXX compiler identification is AppleClang 14.0.0.14000029
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test HAVE_FLAG_ADDRESS_SANITIZER
+-- Performing Test HAVE_FLAG_ADDRESS_SANITIZER - Failed
+-- Performing Test HAVE_FLAG_SANITIZE_ADDRESS
+-- Performing Test HAVE_FLAG_SANITIZE_ADDRESS - Success
+-- Checking _FILE_OFFSET_BITS for large files
+-- Checking _FILE_OFFSET_BITS for large files - not needed
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Performing Test HAVE___BUILTIN_EXPECT
+-- Performing Test HAVE___BUILTIN_EXPECT - Success
+CMake Deprecation Warning at extensions/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found PythonInterp: /Users/takeshikomori/.pyenv/versions/3.8.13/bin/python3 (found suitable version "3.8.13", minimum required is "3") 
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLANG_VERSION_MAJOR
+    CLANG_VERSION_MINOR
+    CLANG_VERSION_PATCH
+    CMAKE_LIBTOOL
+    CMAKE_Swift_COMPILER
+    LLVM_VERSION_MAJOR
+    LLVM_VERSION_MINOR
+    LLVM_VERSION_PATCH
+    PKG_CONFIG_EXECUTABLE
+    SWIFT_DARWIN_SUPPORTED_ARCHS
+    SWIFT_DISABLE_DEAD_STRIPPING
+    SWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE
+
+
+-- Build files have been written to: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64
++ popd
++ env /opt/homebrew/bin/cmake --build /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64 --config RelWithDebInfo -- all
+[80/80][100%][5.283s] Linking CXX executable api_test/api_test
+--- Building llvm ---
++ pushd /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64
++ env /opt/homebrew/bin/cmake -G Ninja -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DCMAKE_CXX_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCMAKE_Swift_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -DCMAKE_LIBTOOL:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -DCMAKE_AR:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar -DCMAKE_RANLIB:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -DLLVM_VERSION_MAJOR:STRING=13 -DLLVM_VERSION_MINOR:STRING=0 -DLLVM_VERSION_PATCH:STRING=0 -DCLANG_VERSION_MAJOR:STRING=13 -DCLANG_VERSION_MINOR:STRING=0 -DCLANG_VERSION_PATCH:STRING=0 -DCMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja -DLLVM_ENABLE_ASSERTIONS:BOOL=TRUE '-DLLVM_TARGETS_TO_BUILD=X86;ARM;AArch64;PowerPC;SystemZ;Mips' -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.9 -DCMAKE_OSX_SYSROOT:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -DCOMPILER_RT_ENABLE_IOS:BOOL=FALSE -DCOMPILER_RT_ENABLE_WATCHOS:BOOL=FALSE -DCOMPILER_RT_ENABLE_TVOS:BOOL=FALSE -DSANITIZER_MIN_OSX_VERSION=10.9 -DLLVM_ENABLE_MODULES:BOOL=FALSE -DCMAKE_OSX_ARCHITECTURES=arm64 -DLLVM_TOOL_COMPILER_RT_BUILD:BOOL=TRUE -DLLVM_BUILD_EXTERNAL_COMPILER_RT:BOOL=TRUE -DLLVM_TARGET_ARCH=AArch64 -DLLVM_HOST_TRIPLE:STRING=arm64-apple-macosx10.9 '-DLLVM_LIT_ARGS=-sv -j 8' -DCOVERAGE_DB= -DCMAKE_INSTALL_PREFIX:PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr -DINTERNAL_INSTALL_PREFIX=local '-DCMAKE_C_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -arch arm64 -target arm64-apple-macosx10.9 -fno-stack-protector -g' '-DCMAKE_CXX_FLAGS=-Wno-unknown-warning-option -Werror=unguarded-availability-new -arch arm64 -target arm64-apple-macosx10.9 -fno-stack-protector -g' '-DCMAKE_C_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG' '-DCMAKE_CXX_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG' -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo -DLLVM_TOOL_SWIFT_BUILD:BOOL=FALSE -DLLVM_TOOL_LLD_BUILD:BOOL=TRUE -DLLVM_INCLUDE_DOCS:BOOL=TRUE -DLLVM_ENABLE_LTO:STRING= -DCOMPILER_RT_INTERCEPT_LIBDISPATCH=ON '-DLLVM_ENABLE_PROJECTS=clang;compiler-rt;clang-tools-extra' -ULLVM_ENABLE_RUNTIMES -DSWIFT_DARWIN_SUPPORTED_ARCHS:STRING=arm64 -DSWIFT_DISABLE_DEAD_STRIPPING:BOOL=TRUE -DSWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax '-DCMAKE_IGNORE_PATH=/usr/lib;/usr/local/lib;/lib' -DPKG_CONFIG_EXECUTABLE=/usr/bin/false /Users/takeshikomori/me/takeshi-1000/swift-project/llvm-project/llvm
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- The CXX compiler identification is AppleClang 14.0.0.14000029
+-- The ASM compiler identification is Clang with GNU-like command-line
+-- Found assembler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- bolt project is disabled
+-- clang project is enabled
+-- clang-tools-extra project is enabled
+-- compiler-rt project is enabled
+-- cross-project-tests project is disabled
+-- libc project is disabled
+-- libclc project is disabled
+-- libcxx project is disabled
+-- libcxxabi project is disabled
+-- libunwind project is disabled
+-- lld project is disabled
+-- lldb project is disabled
+-- mlir project is disabled
+-- openmp project is disabled
+-- polly project is disabled
+-- pstl project is disabled
+-- flang project is disabled
+-- Found libtool - /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for errno.h
+-- Looking for errno.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for link.h
+-- Looking for link.h - not found
+-- Looking for malloc/malloc.h
+-- Looking for malloc/malloc.h - found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for signal.h
+-- Looking for signal.h - found
+-- Looking for sys/ioctl.h
+-- Looking for sys/ioctl.h - found
+-- Looking for sys/mman.h
+-- Looking for sys/mman.h - found
+-- Looking for sys/param.h
+-- Looking for sys/param.h - found
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for sysexits.h
+-- Looking for sysexits.h - found
+-- Looking for termios.h
+-- Looking for termios.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for valgrind/valgrind.h
+-- Looking for valgrind/valgrind.h - not found
+-- Looking for fenv.h
+-- Looking for fenv.h - found
+-- Looking for FE_ALL_EXCEPT
+-- Looking for FE_ALL_EXCEPT - found
+-- Looking for FE_INEXACT
+-- Looking for FE_INEXACT - found
+-- Looking for mach/mach.h
+-- Looking for mach/mach.h - found
+-- Looking for histedit.h
+-- Looking for histedit.h - found
+-- Looking for CrashReporterClient.h
+-- Looking for CrashReporterClient.h - not found
+-- Performing Test HAVE_CRASHREPORTER_INFO
+-- Performing Test HAVE_CRASHREPORTER_INFO - Success
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for pthread_rwlock_init in pthread
+-- Looking for pthread_rwlock_init in pthread - found
+-- Looking for pthread_mutex_lock in pthread
+-- Looking for pthread_mutex_lock in pthread - found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - not found
+-- Looking for pfm_initialize in pfm
+-- Looking for pfm_initialize in pfm - not found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found ZLIB: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libz.tbd (found version "1.2.11") 
+-- Looking for compress2
+-- Looking for compress2 - found
+-- Found LibXml2: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libxml2.tbd (found version "2.9.4") 
+-- Looking for xmlReadMemory
+-- Looking for xmlReadMemory - found
+-- Looking for el_init in edit
+-- Looking for el_init in edit - found
+-- Performing Test Terminfo_LINKABLE
+-- Performing Test Terminfo_LINKABLE - Success
+-- Found Terminfo: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libcurses.tbd  
+-- Looking for xar_open in xar
+-- Looking for xar_open in xar - found
+-- The xar file format has been deprecated: LLVM_HAVE_LIBXAR might be removed in the future.
+-- Looking for arc4random
+-- Looking for arc4random - found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include  
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Success
+-- Looking for __register_frame
+-- Looking for __register_frame - found
+-- Looking for __deregister_frame
+-- Looking for __deregister_frame - found
+-- Looking for __unw_add_dynamic_fde
+-- Looking for __unw_add_dynamic_fde - found
+-- Looking for _Unwind_Backtrace
+-- Looking for _Unwind_Backtrace - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for sysconf
+-- Looking for sysconf - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for setrlimit
+-- Looking for setrlimit - found
+-- Looking for isatty
+-- Looking for isatty - found
+-- Looking for futimens
+-- Looking for futimens - not found
+-- Looking for futimes
+-- Looking for futimes - found
+-- Looking for lseek64
+-- Looking for lseek64 - not found
+-- Looking for mallctl
+-- Looking for mallctl - not found
+-- Looking for mallinfo
+-- Looking for mallinfo - not found
+-- Looking for mallinfo2
+-- Looking for mallinfo2 - not found
+-- Looking for malloc_zone_statistics
+-- Looking for malloc_zone_statistics - found
+-- Looking for getrlimit
+-- Looking for getrlimit - found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - found
+-- Looking for pread
+-- Looking for pread - found
+-- Looking for sbrk
+-- Looking for sbrk - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strerror_s
+-- Looking for strerror_s - not found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Looking for dladdr
+-- Looking for dladdr - found
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC - Failed
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - not found
+-- Looking for pthread_getname_np
+-- Looking for pthread_getname_np - found
+-- Looking for pthread_setname_np
+-- Looking for pthread_setname_np - found
+-- Looking for proc_pid_rusage
+-- Looking for proc_pid_rusage - found
+-- Performing Test HAVE_STD_IS_TRIVIALLY_COPYABLE
+-- Performing Test HAVE_STD_IS_TRIVIALLY_COPYABLE - Success
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS_WITHOUT_LIB - Success
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB
+-- Performing Test HAVE_CXX_ATOMICS64_WITHOUT_LIB - Success
+-- Performing Test LLVM_HAS_ATOMICS
+-- Performing Test LLVM_HAS_ATOMICS - Success
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG
+-- Performing Test SUPPORTS_VARIADIC_MACROS_FLAG - Success
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG
+-- Performing Test SUPPORTS_GNU_ZERO_VARIADIC_MACRO_ARGUMENTS_FLAG - Success
+-- Native target architecture is AArch64
+-- Threads enabled.
+-- Doxygen disabled.
+-- Go bindings disabled.
+-- Ninja version: 1.11.1
+-- Found ld64 - /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- Could NOT find OCaml (missing: OCAMLFIND OCAML_VERSION OCAML_STDLIB_PATH) 
+-- OCaml bindings disabled.
+-- Could NOT find Python module pygments
+-- Could NOT find Python module pygments.lexers.c_cpp
+-- Could NOT find Python module yaml
+-- LLVM host triple: arm64-apple-macosx10.9
+-- LLVM default target triple: arm64-apple-macosx10.9
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Failed
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Failed
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Success
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG - Success
+-- Performing Test C_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG
+-- Performing Test C_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG - Success
+-- Performing Test CXX_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG
+-- Performing Test CXX_SUPPORTS_CXX98_COMPAT_EXTRA_SEMI_FLAG - Success
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Success
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Success
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Success
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Success
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG - Success
+-- Performing Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR
+-- Performing Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR - Success
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL - Success
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP - Success
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG - Success
+-- Performing Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG
+-- Performing Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG
+-- Performing Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG - Success
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS - Failed
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - found
+-- Performing Test macos_signposts_usable
+-- Performing Test macos_signposts_usable - Failed
+-- Found Python3: /opt/homebrew/Frameworks/Python.framework/Versions/3.11/bin/python3.11 (found suitable version "3.11.0", minimum required is "3.6") found components: Interpreter 
+-- Linker detection: ld64
+-- Performing Test HAS_WERROR_GLOBAL_CTORS
+-- Performing Test HAS_WERROR_GLOBAL_CTORS - Success
+-- Performing Test LLVM_HAS_NOGLOBAL_CTOR_MUTEX
+-- Performing Test LLVM_HAS_NOGLOBAL_CTOR_MUTEX - Failed
+-- Looking for __x86_64__
+-- Looking for __x86_64__ - not found
+-- Found Git: /usr/bin/git (found version "2.37.0 (Apple Git-136)") 
+-- Targeting X86
+-- Targeting ARM
+-- Targeting AArch64
+-- Targeting PowerPC
+-- Targeting SystemZ
+-- Targeting Mips
+-- Looking for sys/resource.h
+-- Looking for sys/resource.h - found
+-- Clang version: 13.0.0
+-- Performing Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG
+-- Performing Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG - Success
+-- Host linker version: 819.6
+-- Looking for include file CoreServices/CoreServices.h
+-- Looking for include file CoreServices/CoreServices.h - found
+-- Looking for include file CoreServices/CoreServices.h
+-- Looking for include file CoreServices/CoreServices.h - found
+-- Not building amdgpu-arch: hsa-runtime64 not found
+-- Registering Bye as a pass plugin (static build: OFF)
+-- git version: v0.0.0 normalized to 0.0.0
+-- Version: 1.6.0
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - not found
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11 - Success
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Success
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Success
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS
+-- Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS - Success
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WD654
+-- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Success
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES -- failed to compile
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLANG_VERSION_PATCH
+    CMAKE_Swift_COMPILER
+    COVERAGE_DB
+    LLVM_TOOL_SWIFT_BUILD
+    SANITIZER_MIN_OSX_VERSION
+    SWIFT_DARWIN_SUPPORTED_ARCHS
+    SWIFT_DISABLE_DEAD_STRIPPING
+    SWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE
+
+
+-- Build files have been written to: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64
++ popd
++ env /opt/homebrew/bin/cmake --build /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64 --config RelWithDebInfo -- all
+[164/4528][  3%][41.296s] Building ASM object lib/Support/BLAKE3/CMakeFiles/LLVMSupportBlake3.dir/blake3_avx512_x86-64_unix.S.o
+clang: warning: argument unused during compilation: '-mavx512vl' [-Wunused-command-line-argument]
+[784/4528][ 17%][524.476s] Building CXX object lib/Transforms/Instrumentation/CMakeFiles/LLVMInstrumentation.dir/SoftPointerAuth.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/llvm-project/llvm/lib/Transforms/Instrumentation/SoftPointerAuth.cpp:156:25: warning: 'getPointerElementType' is deprecated: Deprecated without replacement, see https://llvm.org/docs/OpaquePointers.html for context and migration instructions [-Wdeprecated-declarations]
+               ptrType->getPointerElementType()->isIntegerTy(8);
+                        ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/llvm-project/llvm/include/llvm/IR/Type.h:373:5: note: 'getPointerElementType' has been explicitly marked deprecated here
+  [[deprecated("Deprecated without replacement, see "
+    ^
+1 warning generated.
+[2768/4528][ 61%][1690.093s] Building CXX object tools/clang/lib/Sema/CMakeFiles/obj.clangSema.dir/SemaChecking.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/llvm-project/clang/lib/Sema/SemaChecking.cpp:120:13: warning: unused function 'checkArgCountAtLeast' [-Wunused-function]
+static bool checkArgCountAtLeast(Sema &S, CallExpr *Call,
+            ^
+1 warning generated.
+[4521/4528][ 99%][3292.397s] Performing configure step for 'compiler-rt'
+-- The C compiler identification is Clang 13.0.0
+-- The CXX compiler identification is Clang 13.0.0
+-- The ASM compiler identification is Clang with GNU-like command-line
+-- Found assembler: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/./bin/clang
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/./bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/./bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for unwind.h
+-- Looking for unwind.h - found
+-- Looking for rpc/xdr.h
+-- Looking for rpc/xdr.h - not found
+-- Found OSX_SYSROOT: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+CMake Warning at cmake/Modules/CompilerRTUtils.cmake:356 (message):
+  llvm-config finding testingsupport failed with status 1
+Call Stack (most recent call first):
+  CMakeLists.txt:70 (load_llvm_config)
+
+
+-- Performing Test Terminfo_LINKABLE
+-- Performing Test Terminfo_LINKABLE - Success
+-- Found Terminfo: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libcurses.tbd  
+-- Found ZLIB: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libz.tbd (found version "1.2.11") 
+-- Found LibXml2: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libxml2.tbd (found version "2.9.4") 
+-- LLVM_MAIN_SRC_DIR: "/Users/takeshikomori/me/takeshi-1000/swift-project/llvm-project/llvm"
+-- Found Python3: /opt/homebrew/Frameworks/Python.framework/Versions/3.11/bin/python3.11 (found version "3.11.0") found components: Interpreter 
+-- Found libtool - /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool
+-- Looking for fopen in c
+-- Looking for fopen in c - found
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - not found
+-- Performing Test COMPILER_RT_HAS_NODEFAULTLIBS_FLAG
+-- Performing Test COMPILER_RT_HAS_NODEFAULTLIBS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FCF_PROTECTION_FLAG
+-- Performing Test COMPILER_RT_HAS_FCF_PROTECTION_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FPIC_FLAG
+-- Performing Test COMPILER_RT_HAS_FPIC_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_STD_CXX14_FLAG
+-- Performing Test COMPILER_RT_HAS_STD_CXX14_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC - Success
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_COVERAGE_MAPPING_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_COVERAGE_MAPPING_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_MCRC32_FLAG
+-- Performing Test COMPILER_RT_HAS_MCRC32_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MSSE3_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE3_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_GR_FLAG
+-- Performing Test COMPILER_RT_HAS_GR_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GS_FLAG
+-- Performing Test COMPILER_RT_HAS_GS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MT_FLAG
+-- Performing Test COMPILER_RT_HAS_MT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_G_FLAG
+-- Performing Test COMPILER_RT_HAS_G_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WNON_VIRTUAL_DTOR_FLAG
+-- Performing Test COMPILER_RT_HAS_WNON_VIRTUAL_DTOR_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC - Success
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT - Success
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT_PEDANTIC
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT_PEDANTIC - Success
+-- Performing Test COMPILER_RT_HAS_EXTERNAL_FLAG
+-- Performing Test COMPILER_RT_HAS_EXTERNAL_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_W4_FLAG
+-- Performing Test COMPILER_RT_HAS_W4_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WX_FLAG
+-- Performing Test COMPILER_RT_HAS_WX_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4206_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4206_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG - Failed
+-- Performing Test -Warray-bounds
+-- Performing Test -Warray-bounds - Failed
+-- Performing Test -Wuninitialized
+-- Performing Test -Wuninitialized - Failed
+-- Performing Test -Wshadow
+-- Performing Test -Wshadow - Failed
+-- Performing Test -Wempty-body
+-- Performing Test -Wempty-body - Failed
+-- Performing Test -Wsizeof-pointer-memaccess
+-- Performing Test -Wsizeof-pointer-memaccess - Failed
+-- Performing Test -Wsizeof-array-argument
+-- Performing Test -Wsizeof-array-argument - Failed
+-- Performing Test -Wsuspicious-memaccess
+-- Performing Test -Wsuspicious-memaccess - Failed
+-- Performing Test -Wbuiltin-memcpy-chk-size
+-- Performing Test -Wbuiltin-memcpy-chk-size - Failed
+-- Performing Test -Warray-bounds-pointer-arithmetic
+-- Performing Test -Warray-bounds-pointer-arithmetic - Failed
+-- Performing Test -Wreturn-stack-address
+-- Performing Test -Wreturn-stack-address - Failed
+-- Performing Test -Wsizeof-array-decay
+-- Performing Test -Wsizeof-array-decay - Failed
+-- Performing Test -Wformat-insufficient-args
+-- Performing Test -Wformat-insufficient-args - Failed
+-- Performing Test -Wformat-security
+-- Performing Test -Wformat-security - Failed
+-- Performing Test -Wsizeof-array-div
+-- Performing Test -Wsizeof-array-div - Failed
+-- Performing Test -Wsizeof-pointer-div
+-- Performing Test -Wsizeof-pointer-div - Failed
+-- Looking for __func__
+-- Looking for __func__ - found
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG - Success
+-- Looking for include file sys/auxv.h
+-- Looking for include file sys/auxv.h - not found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - not found
+-- Looking for pow in m
+-- Looking for pow in m - found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for backtrace in execinfo
+-- Looking for backtrace in execinfo - not found
+-- Looking for __cxa_throw in c++
+-- Looking for __cxa_throw in c++ - found
+-- Looking for __cxa_throw in stdc++
+-- Looking for __cxa_throw in stdc++ - not found
+-- Performing Test COMPILER_RT_HAS_Z_TEXT
+-- Performing Test COMPILER_RT_HAS_Z_TEXT - Failed
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT - Failed
+-- Checking DARWIN_macosx_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk'
+-- Checking DARWIN_iphonesimulator_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.0.sdk'
+-- Checking DARWIN_iphoneos_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk'
+-- Checking DARWIN_watchsimulator_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator9.0.sdk'
+-- Checking DARWIN_watchos_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.0.sdk'
+-- Checking DARWIN_appletvsimulator_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator16.0.sdk'
+-- Checking DARWIN_appletvos_SYSROOT - '/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk'
+-- Performing Test COMPILER_RT_HAS_APP_EXTENSION
+-- Performing Test COMPILER_RT_HAS_APP_EXTENSION - Success
+-- Got ld supported ARCHES: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+-- Toolchain supported arches: armv6;armv7;armv7s;arm64;arm64e;arm64_32;i386;x86_64;x86_64h;armv6m;armv7k;armv7m;armv7em
+-- Finding valid architectures for osx...
+-- Disabling i386 slice for DARWIN_osx_ARCHS
+-- OSX supported arches: arm64;arm64e;x86_64;x86_64h
+-- Compiler-RT supported architectures: arm64;arm64e;x86_64;x86_64h
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD - Success
+-- Performing Test COMPILER_RT_HAS_FLOAT16
+-- Performing Test COMPILER_RT_HAS_FLOAT16 - Success
+-- Performing Test COMPILER_RT_HAS_ASM_LSE
+-- Performing Test COMPILER_RT_HAS_ASM_LSE - Success
+-- Found arm64 support in /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/SDKSettings.plist
+-- Found arm64e support in /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/SDKSettings.plist
+-- OSX supported builtin arches: i386;x86_64;x86_64h;arm64;arm64e
+-- Builtin supported architectures: i386;x86_64;x86_64h;arm64;arm64e
+-- For osx_i386 builtins preferring i386/fp_mode.c to fp_mode.c
+-- For osx_i386 builtins preferring i386/ashldi3.S to ashldi3.c
+-- For osx_i386 builtins preferring i386/ashrdi3.S to ashrdi3.c
+-- For osx_i386 builtins preferring i386/divdi3.S to divdi3.c
+-- For osx_i386 builtins preferring i386/floatdidf.S to floatdidf.c
+-- For osx_i386 builtins preferring i386/floatdisf.S to floatdisf.c
+-- For osx_i386 builtins preferring i386/floatundidf.S to floatundidf.c
+-- For osx_i386 builtins preferring i386/floatundisf.S to floatundisf.c
+-- For osx_i386 builtins preferring i386/lshrdi3.S to lshrdi3.c
+-- For osx_i386 builtins preferring i386/moddi3.S to moddi3.c
+-- For osx_i386 builtins preferring i386/muldi3.S to muldi3.c
+-- For osx_i386 builtins preferring i386/udivdi3.S to udivdi3.c
+-- For osx_i386 builtins preferring i386/umoddi3.S to umoddi3.c
+-- For osx_i386 builtins preferring i386/floatdixf.S to floatdixf.c
+-- For osx_i386 builtins preferring i386/floatundixf.S to floatundixf.c
+-- For osx_x86_64 builtins preferring i386/fp_mode.c to fp_mode.c
+-- For osx_x86_64 builtins preferring x86_64/floatdidf.c to floatdidf.c
+-- For osx_x86_64 builtins preferring x86_64/floatdisf.c to floatdisf.c
+-- For osx_x86_64 builtins preferring x86_64/floatundidf.S to floatundidf.c
+-- For osx_x86_64 builtins preferring x86_64/floatundisf.S to floatundisf.c
+-- For osx_x86_64 builtins preferring x86_64/floatdixf.c to floatdixf.c
+-- For osx_x86_64 builtins preferring x86_64/floatundixf.S to floatundixf.c
+-- For osx_x86_64h builtins preferring i386/fp_mode.c to fp_mode.c
+-- For osx_x86_64h builtins preferring x86_64/floatdidf.c to floatdidf.c
+-- For osx_x86_64h builtins preferring x86_64/floatdisf.c to floatdisf.c
+-- For osx_x86_64h builtins preferring x86_64/floatundidf.S to floatundidf.c
+-- For osx_x86_64h builtins preferring x86_64/floatundisf.S to floatundisf.c
+-- For osx_x86_64h builtins preferring x86_64/floatdixf.c to floatdixf.c
+-- For osx_x86_64h builtins preferring x86_64/floatundixf.S to floatundixf.c
+-- For osx_arm64 builtins preferring aarch64/fp_mode.c to fp_mode.c
+-- For osx_arm64e builtins preferring aarch64/fp_mode.c to fp_mode.c
+-- For cc_kext_osx_i386 builtins preferring i386/fp_mode.c to fp_mode.c
+-- For cc_kext_osx_i386 builtins preferring i386/ashldi3.S to ashldi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/ashrdi3.S to ashrdi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/divdi3.S to divdi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatdidf.S to floatdidf.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatdisf.S to floatdisf.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatundidf.S to floatundidf.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatundisf.S to floatundisf.c
+-- For cc_kext_osx_i386 builtins preferring i386/lshrdi3.S to lshrdi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/moddi3.S to moddi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/muldi3.S to muldi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/udivdi3.S to udivdi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/umoddi3.S to umoddi3.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatdixf.S to floatdixf.c
+-- For cc_kext_osx_i386 builtins preferring i386/floatundixf.S to floatundixf.c
+-- For cc_kext_osx_x86_64 builtins preferring i386/fp_mode.c to fp_mode.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatdidf.c to floatdidf.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatdisf.c to floatdisf.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatundidf.S to floatundidf.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatundisf.S to floatundisf.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatdixf.c to floatdixf.c
+-- For cc_kext_osx_x86_64 builtins preferring x86_64/floatundixf.S to floatundixf.c
+-- For cc_kext_osx_x86_64h builtins preferring i386/fp_mode.c to fp_mode.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatdidf.c to floatdidf.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatdisf.c to floatdisf.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatundidf.S to floatundidf.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatundisf.S to floatundisf.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatdixf.c to floatdixf.c
+-- For cc_kext_osx_x86_64h builtins preferring x86_64/floatundixf.S to floatundixf.c
+-- For cc_kext_osx_arm64 builtins preferring aarch64/fp_mode.c to fp_mode.c
+-- For cc_kext_osx_arm64e builtins preferring aarch64/fp_mode.c to fp_mode.c
+CMake Warning (dev) at /opt/homebrew/Cellar/cmake/3.25.1/share/cmake/Modules/ExternalProject.cmake:2255 (message):
+  Policy CMP0114 is not set: ExternalProject step targets fully adopt their
+  steps.  Run "cmake --help-policy CMP0114" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  ExternalProject target 'libcxx_tsan_x86_64' would depend on the targets for
+  step(s) 'clean' under policy CMP0114, but this is being left out for
+  compatibility since the policy is not set.
+Call Stack (most recent call first):
+  cmake/Modules/AddCompilerRT.cmake:723 (ExternalProject_Add_StepTargets)
+  lib/tsan/CMakeLists.txt:35 (add_custom_libcxx)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /opt/homebrew/Cellar/cmake/3.25.1/share/cmake/Modules/ExternalProject.cmake:2255 (message):
+  Policy CMP0114 is not set: ExternalProject step targets fully adopt their
+  steps.  Run "cmake --help-policy CMP0114" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  ExternalProject target 'libcxx_tsan_x86_64h' would depend on the targets
+  for step(s) 'clean' under policy CMP0114, but this is being left out for
+  compatibility since the policy is not set.
+Call Stack (most recent call first):
+  cmake/Modules/AddCompilerRT.cmake:723 (ExternalProject_Add_StepTargets)
+  lib/tsan/CMakeLists.txt:35 (add_custom_libcxx)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /opt/homebrew/Cellar/cmake/3.25.1/share/cmake/Modules/ExternalProject.cmake:2255 (message):
+  Policy CMP0114 is not set: ExternalProject step targets fully adopt their
+  steps.  Run "cmake --help-policy CMP0114" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  ExternalProject target 'libcxx_tsan_arm64' would depend on the targets for
+  step(s) 'clean' under policy CMP0114, but this is being left out for
+  compatibility since the policy is not set.
+Call Stack (most recent call first):
+  cmake/Modules/AddCompilerRT.cmake:723 (ExternalProject_Add_StepTargets)
+  lib/tsan/CMakeLists.txt:35 (add_custom_libcxx)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test COMPILER_RT_TARGET_HAS_ATOMICS
+-- Performing Test COMPILER_RT_TARGET_HAS_ATOMICS - Success
+-- Performing Test COMPILER_RT_TARGET_HAS_FCNTL_LCK
+-- Performing Test COMPILER_RT_TARGET_HAS_FCNTL_LCK - Success
+-- Performing Test COMPILER_RT_TARGET_HAS_UNAME
+-- Performing Test COMPILER_RT_TARGET_HAS_UNAME - Success
+-- Performing Test HAS_THREAD_LOCAL
+-- Performing Test HAS_THREAD_LOCAL - Success
+-- Linker detection: ld64
+-- Found arm64 support in /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/SDKSettings.plist
+-- Found arm64e support in /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/SDKSettings.plist
+-- Using cached valid architectures for osx.
+-- OSX supported builtin arches: i386;x86_64;x86_64h;arm64;arm64e
+-- Builtin supported architectures: i386;x86_64;x86_64h;arm64;arm64e
+-- check-interception does nothing.
+-- Generated Sanitizer SUPPORTED_TOOLS list on "Darwin" is "asan;lsan;tsan;ubsan"
+-- sanitizer_common tests on "Darwin" will run against "asan;lsan;tsan;ubsan"
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    COMPILER_RT_PREFIX
+    COMPILER_RT_SRC_ROOT
+
+
+-- Build files have been written to: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/tools/clang/runtime/compiler-rt-bins
+[4525/4528][ 99%][3367.180s] Cleaning compiler-rt...
+[1/1][100%][0.094s] Cleaning all built files...
+Cleaning... 0 files.
+[4525/4528][ 99%][3367.180s] Performing build step for 'compiler-rt'
+[2300/2321][ 99%][110.783s] Linking CXX static library /Users/takeshikomori/me/takeshi-...ert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin/libclang_rt.fuzzer_interceptors_osx.a
+warning: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: archive library: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin/libclang_rt.fuzzer_interceptors_osx.a for architecture: x86_64 the table of contents is empty (no object file members in the library define global symbols)
+warning: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: archive library: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin/libclang_rt.fuzzer_interceptors_osx.a for architecture: x86_64h the table of contents is empty (no object file members in the library define global symbols)
+warning: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: archive library: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin/libclang_rt.fuzzer_interceptors_osx.a for architecture: arm64 the table of contents is empty (no object file members in the library define global symbols)
+[2321/2321][100%][126.860s] Linking CXX static library lib/orc/unittests/libRTOrc.test.osx.a
+[4526/4528][ 99%][3494.057s] No install step for 'compiler-rt'
+[4528/4528][100%][3494.099s] Completed 'compiler-rt'
+copying compiler-rt embedded builtins from /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/14.0.0/lib/darwin into the local clang build directory /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin.
++ lipo -archs /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/14.0.0/lib/darwin/libclang_rt.tvos.a
++ lipo -archs /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/14.0.0/lib/darwin/libclang_rt.tvossim.a
++ lipo -remove i386 /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/14.0.0/lib/darwin/libclang_rt.tvossim.a -output /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/clang/13.0.0/lib/darwin/libclang_rt.tvossim.a
+Building the standard library for: swift-test-stdlib-macosx-arm64
++ mkdir -p /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64
++ mkdir -p /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/.cmake/api/v1/query
++ touch /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/.cmake/api/v1/query/codemodel-v2 /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/.cmake/api/v1/query/cache-v2
++ pushd /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64
+~/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64 ~/me/takeshi-1000/swift-project/swift
++ env /opt/homebrew/bin/cmake -G Ninja -DCMAKE_C_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_CXX_COMPILER_LAUNCHER:PATH=/opt/homebrew/bin/sccache -DCMAKE_C_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -DCMAKE_CXX_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCMAKE_Swift_COMPILER:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -DCMAKE_LIBTOOL:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -DCMAKE_AR:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar -DCMAKE_RANLIB:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -DLLVM_VERSION_MAJOR:STRING=13 -DLLVM_VERSION_MINOR:STRING=0 -DLLVM_VERSION_PATCH:STRING=0 -DCLANG_VERSION_MAJOR:STRING=13 -DCLANG_VERSION_MINOR:STRING=0 -DCLANG_VERSION_PATCH:STRING=0 -DCMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE -DSWIFT_FORCE_OPTIMIZED_TYPECHECKER:BOOL=FALSE -DSWIFT_STDLIB_ENABLE_STDLIBCORE_EXCLUSIVITY_CHECKING:BOOL=FALSE -DSWIFT_ENABLE_EXPERIMENTAL_DIFFERENTIABLE_PROGRAMMING:BOOL=TRUE -DSWIFT_ENABLE_EXPERIMENTAL_CONCURRENCY:BOOL=TRUE -DSWIFT_ENABLE_EXPERIMENTAL_DISTRIBUTED:BOOL=TRUE -DSWIFT_STDLIB_STATIC_PRINT=FALSE -DSWIFT_FREESTANDING_IS_DARWIN:BOOL=FALSE -DSWIFT_STDLIB_BUILD_PRIVATE:BOOL=TRUE -DSWIFT_STDLIB_ENABLE_UNICODE_DATA=TRUE -DSWIFT_TOOLS_LD64_LTO_CODEGEN_ONLY_FOR_SUPPORTING_TARGETS:BOOL=FALSE -DSWIFT_LIPO:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '-DCMAKE_C_FLAGS= -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' '-DCMAKE_CXX_FLAGS= -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector' '-DCMAKE_C_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG' '-DCMAKE_CXX_FLAGS_RELWITHDEBINFO=-O2 -DNDEBUG' -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo -DLLVM_ENABLE_ASSERTIONS:BOOL=TRUE -DBOOTSTRAPPING_MODE:STRING=OFF -DSWIFT_ANALYZE_CODE_COVERAGE:STRING=FALSE -DSWIFT_STDLIB_BUILD_TYPE:STRING=RelWithDebInfo -DSWIFT_STDLIB_ASSERTIONS:BOOL=TRUE -DSWIFT_STDLIB_ENABLE_DEBUG_PRECONDITIONS_IN_RELEASE=FALSE -DSWIFT_ENABLE_DISPATCH:BOOL=TRUE -DSWIFT_IMPLICIT_CONCURRENCY_IMPORT:BOOL=TRUE -DSWIFT_STDLIB_SUPPORT_BACK_DEPLOYMENT:BOOL=TRUE -DSWIFT_STDLIB_SINGLE_THREADED_CONCURRENCY:BOOL=FALSE -DSWIFT_ENABLE_RUNTIME_FUNCTION_COUNTERS:BOOL=TRUE -DSWIFT_STDLIB_HAS_DLADDR:BOOL=TRUE -DSWIFT_RUNTIME_STATIC_IMAGE_INSPECTION:BOOL=FALSE -DSWIFT_STDLIB_OS_VERSIONING:BOOL=TRUE -DSWIFT_STDLIB_HAS_COMMANDLINE:BOOL=TRUE -DSWIFT_STDLIB_HAS_DARWIN_LIBMALLOC:BOOL=TRUE -DSWIFT_STDLIB_HAS_STDIN:BOOL=TRUE -DSWIFT_STDLIB_HAS_ENVIRON:BOOL=TRUE -DSWIFT_STDLIB_ENABLE_LTO:STRING= -DSWIFT_STDLIB_PASSTHROUGH_METADATA_ALLOCATOR:BOOL=FALSE -DSWIFT_STDLIB_SHORT_MANGLING_LOOKUPS:BOOL=TRUE -DSWIFT_STDLIB_ENABLE_VECTOR_TYPES:BOOL=TRUE -DSWIFT_STDLIB_HAS_TYPE_PRINTING:BOOL=TRUE -DSWIFT_STDLIB_TRAP_FUNCTION:STRING= -DSWIFT_STDLIB_EXPERIMENTAL_HERMETIC_SEAL_AT_LINK:BOOL=FALSE -DSWIFT_STDLIB_DISABLE_INSTANTIATION_CACHES:BOOL=FALSE -DSWIFT_STDLIB_REFLECTION_METADATA:STRING=enabled -DSWIFT_NATIVE_LLVM_TOOLS_PATH:STRING= -DSWIFT_NATIVE_CLANG_TOOLS_PATH:STRING= -DSWIFT_NATIVE_SWIFT_TOOLS_PATH:STRING= -DSWIFT_INCLUDE_TOOLS:BOOL=TRUE -DSWIFT_BUILD_REMOTE_MIRROR:BOOL=TRUE -DSWIFT_STDLIB_SIL_DEBUGGING:BOOL=FALSE -DSWIFT_CHECK_INCREMENTAL_COMPILATION:BOOL=FALSE -DSWIFT_ENABLE_ARRAY_COW_CHECKS:BOOL=FALSE -DSWIFT_REPORT_STATISTICS:BOOL=FALSE -DSWIFT_BUILD_DYNAMIC_STDLIB:BOOL=TRUE -DSWIFT_BUILD_STATIC_STDLIB:BOOL=FALSE -DSWIFT_BUILD_DYNAMIC_SDK_OVERLAY:BOOL=TRUE -DSWIFT_BUILD_STATIC_SDK_OVERLAY:BOOL=FALSE -DSWIFT_BUILD_PERF_TESTSUITE:BOOL=FALSE -DSWIFT_BUILD_EXAMPLES:BOOL=TRUE -DSWIFT_INCLUDE_TESTS:BOOL=TRUE -DSWIFT_EMBED_BITCODE_SECTION:BOOL=FALSE -DSWIFT_TOOLS_ENABLE_LTO:STRING= -DSWIFT_BUILD_RUNTIME_WITH_HOST_COMPILER:BOOL=FALSE -DLIBDISPATCH_CMAKE_BUILD_TYPE:STRING=RelWithDebInfo -DSWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax -DPython3_EXECUTABLE=/Applications/Xcode14.0.1.app/Contents/Developer/usr/bin/python3 -DSWIFTLIB_DEPLOYMENT_VERSION_XCTEST_IOS=8.0 -DSWIFT_DARWIN_DEPLOYMENT_VERSION_OSX=10.9 -DSWIFT_DARWIN_DEPLOYMENT_VERSION_IOS=7.0 -DSWIFT_DARWIN_DEPLOYMENT_VERSION_TVOS=9.0 -DSWIFT_DARWIN_DEPLOYMENT_VERSION_WATCHOS=2.0 -DCMAKE_OSX_SYSROOT:PATH=/Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -DCMAKE_OSX_ARCHITECTURES=arm64 -DSWIFT_HOST_TRIPLE:STRING=arm64-apple-macosx10.9 -DSWIFT_HOST_VARIANT=macosx -DSWIFT_HOST_VARIANT_SDK=OSX -DSWIFT_HOST_VARIANT_ARCH=arm64 '-DLLVM_LIT_ARGS=-sv -j 8' -DCOVERAGE_DB= -DSWIFT_PATH_TO_EARLYSWIFTSYNTAX_BUILD_DIR:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/earlyswiftsyntax-macosx-arm64 -DSWIFT_DARWIN_XCRUN_TOOLCHAIN:STRING=default -DSWIFT_AST_VERIFIER:BOOL=TRUE -DSWIFT_SIL_VERIFY_ALL:BOOL=FALSE -DSWIFT_SIL_VERIFY_ALL_MACOS_ONLY:BOOL=FALSE -DSWIFT_RUNTIME_ENABLE_LEAK_CHECKER:BOOL=FALSE -DCMAKE_INSTALL_PREFIX:PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/ -DClang_DIR:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/cmake/clang -DLLVM_DIR:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/cmake/llvm -DSWIFT_PATH_TO_CMARK_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/cmark -DSWIFT_PATH_TO_CMARK_BUILD:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/cmark-macosx-arm64 -DSWIFT_PATH_TO_LIBDISPATCH_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-corelibs-libdispatch -DSWIFT_PATH_TO_LIBDISPATCH_BUILD:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/libdispatch-macosx-arm64 -DSWIFT_PATH_TO_LIBDISPATCH_STATIC_BUILD:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/libdispatch_static-macosx-arm64 -DSWIFT_SDKS:STRING=OSX -DEXPERIMENTAL_STRING_PROCESSING_SOURCE_DIR=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing -DSWIFT_ENABLE_EXPERIMENTAL_STRING_PROCESSING:BOOL=TRUE -DSWIFT_DARWIN_SUPPORTED_ARCHS:STRING=arm64 -DSWIFT_DISABLE_DEAD_STRIPPING:BOOL=TRUE -DSWIFT_PATH_TO_SWIFT_SYNTAX_SOURCE:PATH=/Users/takeshikomori/me/takeshi-1000/swift-project/swift-syntax '-DCMAKE_IGNORE_PATH=/usr/lib;/usr/local/lib;/lib' -DPKG_CONFIG_EXECUTABLE=/usr/bin/false /Users/takeshikomori/me/takeshi-1000/swift-project/swift
+CMake Deprecation Warning at CMakeLists.txt:10 (cmake_policy):
+  The OLD behavior for policy CMP0068 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The Swift compiler identification is Apple 5.7
+-- Check for working Swift compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc
+-- Check for working Swift compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc - works
+-- The CXX compiler identification is AppleClang 14.0.0.14000029
+-- The ASM compiler identification is Clang with GNU-like command-line
+-- Found assembler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMake (/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake) Version: 3.25.1
+-- CMake Make Program (/opt/homebrew/bin/ninja) Version: 1.11.1
+-- C Compiler (/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang) Version: 14.0.0.14000029
+-- C++ Compiler (/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++) Version: 14.0.0.14000029
+-- Swift Compiler (/Applications/Xcode14.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc) Version: 5.7
+-- CMark Version: 
+-- 
+-- Performing Test Terminfo_LINKABLE
+-- Performing Test Terminfo_LINKABLE - Success
+-- Found Terminfo: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libcurses.tbd  
+-- Found ZLIB: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libz.tbd (found version "1.2.11") 
+-- Found LibXml2: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libxml2.tbd (found version "2.9.4") 
+-- Linker detection: ld64
+-- Performing Test C_SUPPORTS_FPIC
+-- Performing Test C_SUPPORTS_FPIC - Success
+-- Performing Test CXX_SUPPORTS_FPIC
+-- Performing Test CXX_SUPPORTS_FPIC - Success
+-- Building with -fPIC
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test C_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Failed
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION
+-- Performing Test CXX_SUPPORTS_FNO_SEMANTIC_INTERPOSITION - Failed
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test C_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME
+-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME - Success
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Success
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW
+-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Success
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG
+-- Performing Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG - Success
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test C_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Success
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG
+-- Performing Test CXX_SUPPORTS_IMPLICIT_FALLTHROUGH_FLAG - Success
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Success
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG - Success
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG
+-- Performing Test CXX_SUPPORTS_CLASS_MEMACCESS_FLAG - Success
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG
+-- Performing Test CXX_SUPPORTS_NOEXCEPT_TYPE_FLAG - Success
+-- Performing Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR
+-- Performing Test CXX_WONT_WARN_ON_FINAL_NONVIRTUALDTOR - Success
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG
+-- Performing Test CXX_SUPPORTS_SUGGEST_OVERRIDE_FLAG - Success
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL
+-- Performing Test CXX_WSUGGEST_OVERRIDE_ALLOWS_ONLY_FINAL - Success
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP
+-- Performing Test C_WCOMMENT_ALLOWS_LINE_WRAP - Success
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test C_SUPPORTS_STRING_CONVERSION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG
+-- Performing Test CXX_SUPPORTS_STRING_CONVERSION_FLAG - Success
+-- Performing Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG
+-- Performing Test C_SUPPORTS_MISLEADING_INDENTATION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG
+-- Performing Test CXX_SUPPORTS_MISLEADING_INDENTATION_FLAG - Success
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS
+-- Performing Test LINKER_SUPPORTS_COLOR_DIAGNOSTICS - Failed
+-- Looking for os_signpost_interval_begin
+-- Looking for os_signpost_interval_begin - found
+-- Performing Test macos_signposts_usable
+-- Performing Test macos_signposts_usable - Success
+-- Performing Test CXX_SUPPORTS_WERROR_SWITCH_FLAG
+-- Performing Test CXX_SUPPORTS_WERROR_SWITCH_FLAG - Success
+-- Performing Test CXX_SUPPORTS_WE4062
+-- Performing Test CXX_SUPPORTS_WE4062 - Failed
+-- Performing Test CXX_SUPPORTS_DOCUMENTATION_FLAG
+-- Performing Test CXX_SUPPORTS_DOCUMENTATION_FLAG - Success
+-- Performing Test CXX_SUPPORTS_UNREACHABLE_CODE_FLAG
+-- Performing Test CXX_SUPPORTS_UNREACHABLE_CODE_FLAG - Success
+-- Performing Test CXX_SUPPORTS_OVERLOADED_VIRTUAL
+-- Performing Test CXX_SUPPORTS_OVERLOADED_VIRTUAL - Success
+-- Performing Test CXX_SUPPORTS_FAPPLICATION_EXTENSION
+-- Performing Test CXX_SUPPORTS_FAPPLICATION_EXTENSION - Success
+-- Xcode 14.0.1, Build version 14A400
+-- 
+-- OS X SDK:
+--   Object File Format: MACHO
+--   Swift Standard Library Path: macosx
+--   Threading Package: darwin
+--   Version: 12.3
+--   Build number: 21E226
+--   Deployment version: 10.9
+--   Triple name: macosx
+--   Simulator: FALSE
+--   Architectures: arm64
+--   arm64 triple: arm64-apple-macosx
+--   Module triple: arm64-apple-macos
+--   arm64 Path: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+-- 
+-- Building host Swift tools for OSX arm64
+--   Build type:     RelWithDebInfo
+--   Assertions:     TRUE
+--   LTO:            
+--   Bootstrapping:  OFF
+--   Swift parser:   TRUE
+-- 
+-- Building Swift standard library and overlays for SDKs: OSX
+--   Build type:       RelWithDebInfo
+--   Assertions:       TRUE
+-- 
+-- Building Swift runtime with:
+--   Leak Detection Checker Entrypoints: FALSE
+-- 
+-- Differentiable Programming Support: TRUE
+-- Concurrency Support:                TRUE
+-- Distributed Support:                TRUE
+-- String Processing Support:          TRUE
+-- Unicode Support:                    TRUE
+-- 
+-- Found Python3: /Applications/Xcode14.0.1.app/Contents/Developer/usr/bin/python3 (found version "3.9.6") found components: Interpreter 
+-- Found LibEdit: /Applications/Xcode14.0.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include (found version ".") 
+-- Looking for el_wgets
+-- Looking for el_wgets - found
+-- Looking for wait4
+-- Looking for wait4 - found
+-- Looking for proc_pid_rusage
+-- Looking for proc_pid_rusage - found
+-- Performing Test is_supported
+-- Performing Test is_supported - Success
+-- Performing Test CXX_SUPPORTS_FORMAT_NONLITERAL_WARNING
+-- Performing Test CXX_SUPPORTS_FORMAT_NONLITERAL_WARNING - Success
+-- Performing Test CXX_SUPPORTS_GLOBAL_CONSTRUCTORS_WARNING
+-- Performing Test CXX_SUPPORTS_GLOBAL_CONSTRUCTORS_WARNING - Success
+-- Performing Test CXX_SUPPORTS_EXIT_TIME_DESTRUCTORS_WARNING
+-- Performing Test CXX_SUPPORTS_EXIT_TIME_DESTRUCTORS_WARNING - Success
+-- Using Experimental String Processing library for _RegexParser (/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing).
+-- Using Experimental String Processing library for _StringProcessing (/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing).
+-- Using Experimental String Processing library for RegexBuilder (/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing).
+-- Found Git: /usr/bin/git (found version "2.37.0 (Apple Git-136)") 
+-- Swift version: 5.8
+-- Swift vendor: 
+-- Swift compiler version: 
+-- Embedded clang compiler version: 
+-- Looking for include file xpc/xpc.h
+-- Looking for include file xpc/xpc.h - found
+-- Copying over early SwiftDriver executable.
+-- From: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/../earlyswiftdriver-macosx-arm64/release/bin/swift-driver
+-- To: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./bin/swift-driver
+-- From: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/../earlyswiftdriver-macosx-arm64/release/bin/swift-help
+-- To: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./bin/swift-help
+-- Looking for dispatch_block_create
+-- Looking for dispatch_block_create - found
+CMake Warning at docs/CMakeLists.txt:23 (message):
+  Unable to find sphinx-build program.  Not building docs
+
+
+-- Configuring done
+CMake Warning (dev) at /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/cmake/llvm/TableGen.cmake:103 (add_custom_command):
+  Policy CMP0116 is not set: Ninja generators transform DEPFILEs from
+  add_custom_command().  Run "cmake --help-policy CMP0116" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+Call Stack (most recent call first):
+  cmake/modules/AddSwiftTableGen.cmake:6 (tablegen)
+  include/swift/Option/CMakeLists.txt:2 (swift_tablegen)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/llvm-macosx-arm64/lib/cmake/llvm/TableGen.cmake:103 (add_custom_command):
+  Policy CMP0116 is not set: Ninja generators transform DEPFILEs from
+  add_custom_command().  Run "cmake --help-policy CMP0116" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+Call Stack (most recent call first):
+  cmake/modules/AddSwiftTableGen.cmake:6 (tablegen)
+  tools/SourceKit/tools/sourcekitd-test/CMakeLists.txt:2 (swift_tablegen)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLANG_VERSION_MAJOR
+    CLANG_VERSION_MINOR
+    CLANG_VERSION_PATCH
+    CMAKE_LIBTOOL
+    LIBDISPATCH_CMAKE_BUILD_TYPE
+    SWIFTLIB_DEPLOYMENT_VERSION_XCTEST_IOS
+    SWIFT_BUILD_EXAMPLES
+    SWIFT_HOST_TRIPLE
+    SWIFT_PATH_TO_LIBDISPATCH_SOURCE
+
+
+-- Build files have been written to: /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64
++ popd
+~/me/takeshi-1000/swift-project/swift
++ /opt/homebrew/bin/cmake --build /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64 -- -j8 all swift-test-stdlib-macosx-arm64
+[28/1335][  2%][4.323s] Building CXX object stdlib/toolchain/Compatibility56/CMakeFiles/swiftCompatibility56-macosx-arm64.dir/Concurrency/TaskAlloc.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/toolchain/Compatibility56/Concurrency/TaskAlloc.cpp:44:26: warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+  static GlobalAllocator global;
+                         ^
+1 warning generated.
+[257/1335][ 19%][83.396s] Generating ../../../lib/swift/macosx/libswiftRemoteMirror.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftRemoteMirror.dylib: replacing existing signature
+[379/1335][ 28%][218.538s] Building CXX object lib/Basic/CMakeFiles/swiftBasic.dir/SourceLoc.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/Basic/SourceLoc.cpp:27:35: warning: variable 'arbitraryTotal' set but not used [-Wunused-but-set-variable]
+  LLVM_ATTRIBUTE_USED static char arbitraryTotal = 0;
+                                  ^
+1 warning generated.
+[442/1335][ 33%][259.079s] Linking Swift static library lib/libswiftASTGen.a
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Diagnostics.swift:17:3: warning: switch covers known cases, but 'DiagnosticSeverity' may have additional unknown values
+  switch severity {
+  ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Diagnostics.swift:17:3: note: handle unknown values using "@unknown default"
+  switch severity {
+  ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Diagnostics.swift:69:5: warning: switch covers known cases, but 'FixIt.Change' may have additional unknown values
+    switch change {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Diagnostics.swift:69:5: note: handle unknown values using "@unknown default"
+    switch change {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Generics.swift:54:9: warning: switch covers known cases, but 'GenericRequirementSyntax.Body' may have additional unknown values
+        switch requirement.body {
+        ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/ASTGen/Sources/ASTGen/Generics.swift:54:9: note: handle unknown values using "@unknown default"
+        switch requirement.body {
+        ^
+[586/1335][ 43%][487.363s] Building CXX object lib/IRGen/CMakeFiles/swiftIRGen.dir/IRGenModule.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/IRGen/IRGenModule.cpp:1874:7: warning: code will never be executed [-Wunreachable-code]
+  if (getOptions().DisableReadonlyStaticObjects)
+      ^~~~~~~~~~
+1 warning generated.
+[913/1335][ 68%][973.594s] Building CXX object lib/SILOptimizer/CMakeFiles/swiftSILOptimizer.dir/Mandatory/AddressLowering.cpp.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/lib/SILOptimizer/Mandatory/AddressLowering.cpp:966:14: warning: 'getOwnershipKind' is deprecated: Please use ValueBase::getOwnershipKind() [-Wdeprecated-declarations]
+       value.getOwnershipKind() == OwnershipKind::Guaranteed))
+             ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/include/swift/SIL/SILValue.h:680:5: note: 'getOwnershipKind' has been explicitly marked deprecated here
+  [[deprecated("Please use ValueBase::getOwnershipKind()")]] ValueOwnershipKind
+    ^
+1 warning generated.
+[1219/1335][ 91%][1417.184s] Generating /Users/takeshikomori/me/takeshi-1000/swift-proj...t/swift-macosx-arm64/./lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Decodable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Encodable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Hashable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+[1223/1335][ 91%][1422.143s] Generating /Users/takeshikomori/me/takeshi-1000/swift-proj...sx-arm64/./lib/swift/macosx/SwiftOnoneSupport.swiftmodule/arm64-apple-macos.swiftmodule
+<unknown>:0: warning: module 'SwiftOnoneSupport' cannot be built with any of the -experimental-skip-*-function-bodies* flags; they have been automatically disabled
+<unknown>:0: warning: module 'SwiftOnoneSupport' cannot be built with any of the -experimental-skip-*-function-bodies* flags; they have been automatically disabled
+[1231/1335][ 92%][1432.065s] Compiling /Users/takeshikomori/me/takeshi-1000/swift-proje...ithDebInfoAssert/swift-macosx-arm64/stdlib/public/Concurrency//OSX/arm64/_Concurrency.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/MainActor.swift:89:22: warning: non-sendable type 'T' returned by call to main actor-isolated function cannot cross actor boundary
+    return try await body()
+                     ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/MainActor.swift:85:19: note: consider making generic parameter 'T' conform to the 'Sendable' protocol
+  static func run<T>(
+                  ^
+                   : Sendable
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/AsyncStreamBuffer.swift:256:13: warning: 'withTaskCancellationHandler(handler:operation:)' is deprecated: renamed to 'withTaskCancellationHandler(operation:onCancel:)'
+      await withTaskCancellationHandler { [cancel] in
+            ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/AsyncStreamBuffer.swift:256:13: note: use 'withTaskCancellationHandler(operation:onCancel:)' instead
+      await withTaskCancellationHandler { [cancel] in
+            ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/AsyncStreamBuffer.swift:515:17: warning: 'withTaskCancellationHandler(handler:operation:)' is deprecated: renamed to 'withTaskCancellationHandler(operation:onCancel:)'
+      try await withTaskCancellationHandler { [cancel] in
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/AsyncStreamBuffer.swift:515:17: note: use 'withTaskCancellationHandler(operation:onCancel:)' instead
+      try await withTaskCancellationHandler { [cancel] in
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/TaskLocal.swift:198:7: warning: will never be executed
+      fatalError("Will never be executed, since enclosing instance is Never")
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/TaskLocal.swift:197:9: note: 'object' is of type 'Never' which cannot be constructed because it is an enum with no cases
+    get {
+        ^
+[1242/1335][ 93%][1565.059s] Compiling /Users/takeshikomori/me/takeshi-1000/swift-proje...ild/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/stdlib/public/core//OSX/arm64/Swift.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Decodable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Encodable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/core/SIMDVector.swift:63:17: warning: protocol 'SIMDScalar' should be declared to refine 'Hashable' due to a same-type constraint on 'Self'
+public protocol SIMDScalar {
+                ^
+[1247/1335][ 93%][1566.097s] Linking CXX shared library lib/swift/macosx/arm64/libswiftCore.dylib
+ld: warning: static initializer found in 'stdlib/public/runtime/CMakeFiles/swiftRuntime-macosx-arm64.dir/Metadata.cpp.o'. Use -no_inits to make this an error.  Use -no_warn_inits to suppress warning
+ld: warning: static initializer found in 'stdlib/public/runtime/CMakeFiles/swiftRuntime-macosx-arm64.dir/MetadataLookup.cpp.o'. Use -no_inits to make this an error.  Use -no_warn_inits to suppress warning
+ld: warning: static initializer found in 'stdlib/public/stubs/CMakeFiles/swiftStdlibStubs-macosx-arm64.dir/GlobalObjects.cpp.o'. Use -no_inits to make this an error.  Use -no_warn_inits to suppress warning
+[1248/1335][ 93%][1566.658s] Generating ../../../lib/swift/macosx/libswiftCore.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftCore.dylib: replacing existing signature
+[1251/1335][ 93%][1567.117s] Generating ../../../lib/swift/macosx/libswiftSwiftOnoneSupport.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftSwiftOnoneSupport.dylib: replacing existing signature
+[1259/1335][ 94%][1569.154s] Building CXX object stdlib/public/Concurrency/CMakeFiles/swift_Concurrency-macosx-arm64.dir/Task.cpp.o
+In file included from /Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/Task.cpp:1624:
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/../CompatibilityOverride/../CompatibilityOverride/CompatibilityOverrideConcurrency.def:184:1: warning: function 'swift_task_asyncMainDrainQueue' declared 'noreturn' should not return [-Winvalid-noreturn]
+OVERRIDE_TASK(task_asyncMainDrainQueue, void,
+^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/Task.cpp:1623:23: note: expanded from macro 'OVERRIDE_TASK'
+#define OVERRIDE_TASK COMPATIBILITY_OVERRIDE
+                      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/../CompatibilityOverride/CompatibilityOverride.h:191:7: note: expanded from macro 'COMPATIBILITY_OVERRIDE'
+      return Override(COMPATIBILITY_UNPAREN_WITH_COMMA(namedArgs)              \
+      ^
+In file included from /Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/Task.cpp:1624:
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/../CompatibilityOverride/../CompatibilityOverride/CompatibilityOverrideConcurrency.def:184:1: warning: function 'swift_task_asyncMainDrainQueue' declared 'noreturn' should not return [-Winvalid-noreturn]
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/Task.cpp:1623:23: note: expanded from macro 'OVERRIDE_TASK'
+#define OVERRIDE_TASK COMPATIBILITY_OVERRIDE
+                      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift/stdlib/public/Concurrency/../CompatibilityOverride/CompatibilityOverride.h:193:5: note: expanded from macro 'COMPATIBILITY_OVERRIDE'
+    return swift_##name##Impl COMPATIBILITY_PAREN(namedArgs);                  \
+    ^
+2 warnings generated.
+[1272/1335][ 95%][1570.466s] Generating ../../../lib/swift/macosx/libswiftDarwin.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftDarwin.dylib: replacing existing signature
+[1277/1335][ 95%][1570.703s] Generating ../../../lib/swift/macosx/libswift_Differentiation.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswift_Differentiation.dylib: replacing existing signature
+[1279/1335][ 95%][1570.748s] Generating ../../../lib/swift/macosx/libswiftSwiftPrivate.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftSwiftPrivate.dylib: replacing existing signature
+[1283/1335][ 96%][1570.978s] Generating ../../../lib/swift/macosx/libswift_Concurrency.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswift_Concurrency.dylib: replacing existing signature
+[1286/1335][ 96%][1571.064s] Generating ../../../lib/swift/macosx/libswiftSwiftPrivateLibcExtras.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftSwiftPrivateLibcExtras.dylib: replacing existing signature
+[1288/1335][ 96%][1571.116s] Generating ../../../lib/swift/macosx/libswiftSwiftPrivateThreadExtras.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftSwiftPrivateThreadExtras.dylib: replacing existing signature
+[1290/1335][ 96%][1571.325s] Linking CXX executable bin/swift-reflection-test-macosx-arm64
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./bin/swift-reflection-test-macosx-arm64: replacing existing signature
+[1292/1335][ 96%][1571.486s] Generating ../../../lib/swift/macosx/libswiftSwiftReflectionTest.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftSwiftReflectionTest.dylib: replacing existing signature
+[1296/1335][ 97%][1575.418s] Linking CXX shared library lib/swift/macosx/arm64/libswiftDistributed.dylib
+ld: warning: invalid -install_name (@rpath/libswift_Concurrency.dylib) in dependent dylib (lib/swift/macosx/arm64/libswift_Concurrency.dylib). Dylibs/frameworks which might go in dyld shared cache cannot link with dylib that uses @rpath, @loader_path, etc.
+ld: warning: invalid -install_name (@rpath/libswift_Concurrency.dylib) in dependent dylib (/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/arm64/libswift_Concurrency.dylib). Dylibs/frameworks which might go in dyld shared cache cannot link with dylib that uses @rpath, @loader_path, etc.
+[1297/1335][ 97%][1575.455s] Generating ../../../lib/swift/macosx/libswiftDistributed.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftDistributed.dylib: replacing existing signature
+[1300/1335][ 97%][1620.085s] Generating ../../../lib/swift/macosx/libswift_RegexParser.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswift_RegexParser.dylib: replacing existing signature
+[1311/1335][ 98%][1647.752s] Compiling /Users/takeshikomori/me/takeshi-1000/swift-proje...Assert/swift-macosx-arm64/stdlib/public/StringProcessing//OSX/arm64/_StringProcessing.o
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ByteCodeGen.swift:144:5: warning: switch covers known cases, but 'AST.Reference.Kind' may have additional unknown values
+    switch ref.kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ByteCodeGen.swift:144:5: note: handle unknown values using "@unknown default"
+    switch ref.kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ByteCodeGen.swift:639:5: warning: switch covers known cases, but 'AST.Quantification.Kind' may have additional unknown values
+    switch updatedKind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ByteCodeGen.swift:639:5: note: handle unknown values using "@unknown default"
+    switch updatedKind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:283:5: warning: switch covers known cases, but 'AST.Atom.Kind' may have additional unknown values
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:283:5: note: handle unknown values using "@unknown default"
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:613:7: warning: switch covers known cases, but 'AST.Atom.CharacterProperty.Kind' may have additional unknown values
+      switch kind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:613:7: note: add missing case: '.mapping(_, _)'
+      switch kind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:613:7: note: handle unknown values using "@unknown default"
+      switch kind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:705:5: warning: switch covers known cases, but 'Unicode.BinaryProperty' may have additional unknown values
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:705:5: note: handle unknown values using "@unknown default"
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:871:5: warning: switch covers known cases, but 'Unicode.POSIXProperty' may have additional unknown values
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:871:5: note: handle unknown values using "@unknown default"
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:918:5: warning: switch covers known cases, but 'Unicode.ExtendedGeneralCategory' may have additional unknown values
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/ConsumerInterface.swift:918:5: note: handle unknown values using "@unknown default"
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Engine/InstPayload.swift:410:5: warning: switch covers known cases, but 'AST.Quantification.Kind' may have additional unknown values
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Engine/InstPayload.swift:410:5: note: handle unknown values using "@unknown default"
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/MatchingOptions.swift:165:7: warning: switch covers known cases, but 'AST.MatchingOption.Kind' may have additional unknown values
+      switch astKind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/MatchingOptions.swift:165:7: note: handle unknown values using "@unknown default"
+      switch astKind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1049:5: warning: switch covers known cases, but 'AST.Atom.Kind' may have additional unknown values
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1049:5: note: handle unknown values using "@unknown default"
+    switch kind {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1107:5: warning: switch covers known cases, but 'AST.Quantification.Amount' may have additional unknown values
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1107:5: note: handle unknown values using "@unknown default"
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1130:5: warning: switch covers known cases, but 'AST.Quantification.Kind' may have additional unknown values
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/PrintAsPattern.swift:1130:5: note: handle unknown values using "@unknown default"
+    switch self {
+    ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:40:7: warning: switch covers known cases, but 'AST.Node' may have additional unknown values
+      switch self {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:40:7: note: handle unknown values using "@unknown default"
+      switch self {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:137:9: warning: switch covers known cases, but 'AST.CustomCharacterClass.SetOp' may have additional unknown values
+        switch op.value {
+        ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:137:9: note: handle unknown values using "@unknown default"
+        switch op.value {
+        ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:115:7: warning: switch covers known cases, but 'AST.CustomCharacterClass.Member' may have additional unknown values
+      switch member {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/ASTConversion.swift:115:7: note: handle unknown values using "@unknown default"
+      switch member {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/DSLTree.swift:618:7: warning: switch covers known cases, but 'AST.AbsentFunction.Kind' may have additional unknown values
+      switch abs.ast.kind {
+      ^
+/Users/takeshikomori/me/takeshi-1000/swift-project/swift-experimental-string-processing/Sources/_StringProcessing/Regex/DSLTree.swift:618:7: note: handle unknown values using "@unknown default"
+      switch abs.ast.kind {
+      ^
+[1315/1335][ 98%][1648.089s] Generating ../../../lib/swift/macosx/libswift_StringProcessing.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswift_StringProcessing.dylib: replacing existing signature
+[1317/1335][ 98%][1648.165s] Generating ../../../lib/swift/macosx/libswiftOSLogTestHelper.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftOSLogTestHelper.dylib: replacing existing signature
+[1320/1335][ 98%][1650.495s] Linking CXX shared library lib/swift/macosx/arm64/libswiftRegexBuilder.dylib
+ld: warning: linking with (/usr/lib/swift/libswift_RegexParser.dylib) but not using any symbols from it
+[1321/1335][ 98%][1650.530s] Generating ../../../lib/swift/macosx/libswiftRegexBuilder.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftRegexBuilder.dylib: replacing existing signature
+[1329/1335][ 99%][1661.302s] Generating ../../../lib/swift/macosx/libswiftStdlibUnittest.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftStdlibUnittest.dylib: replacing existing signature
+[1331/1335][ 99%][1661.385s] Generating ../../../lib/swift/macosx/libswiftRuntimeUnittest.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftRuntimeUnittest.dylib: replacing existing signature
+[1334/1335][ 99%][1661.457s] Generating ../../../lib/swift/macosx/libswiftDifferentiationUnittest.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftDifferentiationUnittest.dylib: replacing existing signature
+[1335/1335][100%][1661.475s] Generating ../../../lib/swift/macosx/libswiftStdlibUnittestFoundationExtras.dylib
+/Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/./lib/swift/macosx/libswiftStdlibUnittestFoundationExtras.dylib: replacing existing signature
+--- Build Script Analyzer ---
+Build Script Log: /Users/takeshikomori/me/takeshi-1000/swift-project/build/.build_script_log
+Build Percentage 	 Build Duration (sec) 	 Build Phase
+================ 	 ==================== 	 ===========
+64.9%             	 3559.03               	 Building llvm
+30.7%             	 1682.08               	 macosx-arm64-swift-build
+2.4%              	 131.65                	 Building earlyswiftdriver
+1.9%              	 104.68                	 Building earlyswiftsyntax
+0.1%              	 7.21                  	 Building cmark
+0.0%              	 0.15                  	 macosx-arm64-swift-test
+0.0%              	 0.11                  	 macosx-arm64-swift-install
+0.0%              	 0.07                  	 merged-hosts-lipo-core
+0.0%              	 0.07                  	 macosx-arm64-extractsymbols
+0.0%              	 0.07                  	 macosx-arm64-package
+0.0%              	 0.07                  	 merged-hosts-lipo
+Total Duration: 5485.19 seconds (1h 31m 25s)
