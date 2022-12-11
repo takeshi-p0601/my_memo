@@ -6,7 +6,7 @@ $ utils/build-script --skip-build-benchmarks \
   --sccache --release-debuginfo --swift-disable-dead-stripping --bootstrapping=off
 ```
 
-その後、システムで標準で搭載されているswiftコンパイラドライバで、main.swiftをコンパイルし、mainという名前の実行バイナリが生成されたのを確認した後
+その後、システムで標準で搭載されているswiftコンパイラドライバで、main.swiftをビルド、mainという名前の実行バイナリが生成されたのを確認した後
 上記のローカルでビルドしてできた成果物を使用して、実行バイナリ作ろうとしたがエラーが発生する
 
 ```
