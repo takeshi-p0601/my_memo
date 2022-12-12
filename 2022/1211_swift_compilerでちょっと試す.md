@@ -7,7 +7,7 @@ $ utils/build-script --skip-build-benchmarks \
 ```
 
 その後、システムで標準で搭載されているswiftコンパイラドライバで、main.swiftをビルド、mainという名前の実行バイナリが生成されたのを確認した後
-上記のローカルでビルドしてできた成果物を使用して、実行バイナリ作ろうとしたが、リンク時にエラーが発生する
+上記のローカルでビルドしてできた成果物(コンパイラのバイナリ)でも、実行バイナリを作ろうとしたが、リンク時にエラーが発生する
 
 ```
 $ /Users/takeshikomori/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/bin/swiftc main.swift -v   
