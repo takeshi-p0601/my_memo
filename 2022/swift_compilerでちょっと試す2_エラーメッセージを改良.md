@@ -38,7 +38,7 @@ print("hello"
 6. ビルドしてできたコンパイラのバイナリを使ってコンパイルしてみる 
 
 ```
-$ swiftc main.swift 
+$  ~/me/takeshi-1000/swift-project/build/Ninja-RelWithDebInfoAssert/swift-macosx-arm64/bin/swift main.swift -c 
 main.swift:2:1: error: expected ')' in expression list
 
 ^
